@@ -34,22 +34,26 @@
     <header class="hero-header">
         <nav data-navigation>
             <div class="wrapper container-fluid">
-                <div class="extra">
-                    <a href="" class="logo"><img src="/assets/logo/logo.png" alt=""></a><svg class="open-nav"
-                        xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                        fill="#5f6368">
-                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-                    </svg>
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                        fill="#5f6368">
-                        <path
-                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                    </svg> -->
+                <!-- LOGO CONTAINER  -->
+                <div class="logo-container">
+                    <a href="/index.html" aria-label="logo image" class="logo"><img src="/assets/logo/logo.webp"
+                            alt="logo"></a>
+                    <!-- BUTTON TO TOGGLE NAVIGATION ON MOBILE SCREEN -->
+                    <div class="open-nav toggle-mobile-nav">
+                        <div class="bar"></div>
+                        <div class="bar alt"></div>
+                        <div class="bar"></div>
+                    </div>
                 </div>
                 <ul class="nav-items display-none" aria-expanded="false" data-searchbar-opened="false">
+                    <!-- NAVIGATION LINKS  -->
                     <div class="responsive-nav-wrapper">
+                        <!-- HOME PAGE LINK  -->
                         <li><a href="/">Home</a></li>
-                        <li class="link-dropdown-parent"><a href=""><span>Program</span>
+                        <!-- PROGRAMS PAGE WITH DROPDOWN LINK  -->
+                        <li class="link-dropdown-parent">
+                            <a href="javascript:void(0)" role="button">
+                                <span>Program</span>
                                 <span>
                                     <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -58,22 +62,23 @@
                                             stroke-width="1.33333" stroke-miterlimit="10" stroke-linecap="round"
                                             stroke-linejoin="round" />
                                     </svg>
-
                                 </span>
                             </a>
                             <ul class="dropdown" aria-expanded="false">
                                 <div>
-                                    <li><a href="courses.html">Courses</a></li>
-                                    <li><a href="">Reserach</a></li>
-                                    <li><a href="/internship.html">Intenship</a></li>
+                                    <li><a href="/courses.html">Courses</a></li>
+
+                                    <li><a href="/internship.html">Internship</a></li>
 
                                 </div>
                             </ul>
                         </li>
-
+                        <!-- ABOUT PAGE LINK  -->
                         <li><a href="/about.html">About Us</a></li>
-
-                        <li class="link-dropdown-parent"><a href=""><span>Media</span>
+                        <!-- MEDIA PAGE LINK  -->
+                        <li class="link-dropdown-parent">
+                            <a href="javascript:void(0)" role="button">
+                                <span>Media</span>
                                 <span>
                                     <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -87,13 +92,14 @@
                             </a>
                             <ul class="dropdown" aria-expanded="false">
                                 <div>
-                                    <li><a href="">Events/News</a></li>
-                                    <li><a href="">Blog</a></li>
+                                    <li><a href="/events.html">Events/News</a></li>
+                                    <li><a href="/blog.html">Blog</a></li>
                                 </div>
                             </ul>
                         </li>
-
+                        <!-- CONTACT PAGE LINK  -->
                         <li><a href="/contact.html">Contact Us</a></li>
+                        <!-- SEARCHBAR  -->
                         <li class="keep">
                             <form action="" aria-expanded="true" class="search-bar">
                                 <button type="submit" class="input-search-btn">
@@ -111,7 +117,7 @@
 
                             </form>
                         </li>
-
+                        <!-- CALL TO ACTION IN NAVBAR ON MOBILE SCREENS -->
                         <div class="nav-cta">
                             <li class="dropdown-cta">
                                 <a href="" class="cta full-width">Explore Programs
@@ -124,6 +130,7 @@
                                 </a>
                             </li>
                         </div>
+                        <!-- BUTTON TO OPEN SEARCH BAR  -->
                         <li data-toggle-searchbar="open">
                             <button aria-label=" open search bar">
                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
@@ -136,7 +143,7 @@
                                 </svg>
                             </button>
                         </li>
-
+                        <!-- BUTTON TO CLOSE SEARCH BAR  -->
                         <li class="keep" data-toggle-searchbar="close">
                             <button>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -146,7 +153,6 @@
                                 </svg>
                             </button>
                         </li>
-
                     </div>
                 </ul>
             </div>
@@ -203,12 +209,83 @@
             </div>
 
         </div>
-        <!-- <div class="slide-buttons">
-            <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
-            <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
+
+        <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
         </div> -->
     </header>
+    <section>
+        <div>
+            <div class="about-page-divider container">
+                <div class="text-content">
+                    <h3>Our Partners</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur odio illo aut natus
+                        consectetur
+                        assumenda tempore perspiciatis laudantium placeat, autem maiores sapiente fugit culpa qui
+                        quaerat
+                        aspernatur, a quibusdam doloribus tenetur? Incidunt quidem iure fugiat odit cumque, officia quam
+                        aut!</p>
+                </div>
+                <div class="split-images">
+                    <img src="/assets/images/wep-utg8ebn7-1.webp" alt="collaborating company image 1" loading="lazy"
+                        width="198" height="32">
+                    <img src="/assets/images/fanaka-bychdn-o-1.webp" alt="collaborating company image" loading="lazy"
+                        width="185.33" height="100">
 
+                    <img src="/assets/images/vector.webp" alt="collaborating company image" loading="lazy" width="146"
+                        height="83">
+                    <img src="/assets/images/lafaaaclogo-d56qnahv-1.webp" alt="collaborating company image"
+                        loading="lazy" width="148.82" height="100">
+                    <img src="/assets/images/vector-1.webp" alt="collaborating company image" loading="lazy" width="159"
+                        height="68">
+                    <img src="/assets/images/vector-2.webp" alt="collaborating company image" loading="lazy" width="144"
+                        height="62">
+                    <img src="/assets/images/wep-utg8ebn7-1.webp" alt="collaborating company image 1" loading="lazy"
+                        width="198" height="32">
+                    <img src="/assets/images/fanaka-bychdn-o-1.webp" alt="collaborating company image" loading="lazy"
+                        width="185.33" height="100">
+                </div>
+            </div>
+        </div>
+        <div class="green-background">
+            <div class="about-page-divider container">
+                <div class="text-content">
+                    <h3>Our Partners</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur odio illo aut natus
+                        consectetur
+                        assumenda tempore perspiciatis laudantium placeat, autem maiores sapiente fugit culpa qui
+                        quaerat
+                        aspernatur, a quibusdam doloribus tenetur? Incidunt quidem iure fugiat odit cumque, officia quam
+                        aut!</p>
+                </div>
+                <div class="single-image-center">
+                    <img src="/assets/images/vector-2.webp" alt="collaborating company image" loading="lazy" width="144"
+                        height="62">
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="about-page-divider container">
+                <div class="image-grid">
+                    <div>g</div>
+                    <div class="two-boxes">
+                        <div>g</div>
+                        <div>g</div>
+                    </div>
+                </div>
+                <div class="text-content">
+                    <h3>Our Partners</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur odio illo aut natus
+                        consectetur
+                        assumenda tempore perspiciatis laudantium placeat, autem maiores sapiente fugit culpa qui
+                        quaerat
+                        aspernatur, a quibusdam doloribus tenetur? Incidunt quidem iure fugiat odit cumque, officia quam
+                        aut!</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
     <section class="subscribe features__section wrapper">
         <div class="subscribe features__section container">
             <h2 class="subscribe features__header">
