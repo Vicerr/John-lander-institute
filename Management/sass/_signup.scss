@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+}
+
+.signin-body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin-inline: auto;
+}
+
+label,
+input,
+button {
+    font-family: inherit;
+}
+
+.signin-form {
+    width: min(90%, 486px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+
+    @media screen and (width > 600px) {
+        border: 1px solid #999b9c;
+        padding: 36px;
+
+    }
+
+    header {
+        display: grid;
+        gap: .6rem;
+        place-content: center;
+    }
+
+    .form-wrapper {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .signin-text {
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    .signin-logo {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 62px;
+            height: 62px;
+        }
+    }
+}
+
+.form-group {
+    position: relative;
+    color: #afb1b1;
+
+    >* {
+        display: block;
+    }
+
+    label {
+        position: absolute;
+        font-size: 12px;
+        font-weight: 400;
+        top: 8px;
+        left: 8px;
+    }
+
+    input {
+        height: 100%;
+        width: 100%;
+        border: 0;
+        outline: 1px solid #afb1b1;
+        padding: 8px;
+        display: block;
+        padding-top: 2rem;
+        border-radius: 10px;
+        transition: outline .3s ease, box-shadow .3s ease;
+
+        ::placeholder {
+            color: #afb1b1;
+        }
+
+        &:focus {
+            box-shadow: 0px 0px 1px 3px #1e8fff67;
+            outline: 1px solid #1f8efc;
+        }
+    }
+
+    .view-password {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        --_size: 30px;
+        width: var(--_size);
+        height: var(--_size);
+        display: grid;
+        cursor: pointer;
+        place-content: center;
+    }
+}
+
+.signin-submit {
+    margin-top: 1rem;
+    padding-block: 1rem;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: #001e60;
+    border-radius: 8px;
+    font-weight: 500;
+    color: white;
+    font-size: 14px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

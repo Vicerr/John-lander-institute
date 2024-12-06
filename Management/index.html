@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script defer src="/js/main.js"></script>
+</head>
+
+<body>
+    <nav data-navigation>
+        <div class="wrapper container">
+            <!-- LOGO CONTAINER  -->
+            <div class="logo-container">
+                <a href="/index.html" aria-label="logo image" class="logo"><img src="/assets/images/logo.webp"
+                        alt="logo"></a>
+                <!-- BUTTON TO TOGGLE NAVIGATION ON MOBILE SCREEN -->
+                <div class="open-nav toggle-mobile-nav">
+                    <div class="bar"></div>
+                    <div class="bar alt"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <ul class="nav-items display-none" aria-expanded="true" data-searchbar-opened="false">
+                <!-- NAVIGATION LINKS  -->
+                <div class="responsive-nav-wrapper">
+                    <!-- HOME PAGE LINK  -->
+                    <li><a href="/">Home</a></li>
+                    <!-- PROGRAMS PAGE WITH DROPDOWN LINK  -->
+
+                    <!-- ABOUT PAGE LINK  -->
+                    <li><a href="/results.html">Results</a></li>
+                    <!-- MEDIA PAGE LINK  -->
+
+                    <!-- CONTACT PAGE LINK  -->
+                    <li><a href="/registered-courses.html">Registered Courses</a></li>
+                    <li><a href="/certificates.html">Certificates</a></li>
+                    <li><a href="/notififcations.html">Notifications</a></li>
+                    <!-- SEARCHBAR  -->
+                    <li class="logout"><button data-open-logout-popover>
+                            Log Out
+                        </button></li>
+
+
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <header>
+            <div class=" profile">
+                <div class="profile-image-container">
+                    <img src="/assets/images/account-image.webp" alt="" class="profile-image">
+                </div>
+                <p>Welcome John Doe</p>
+            </div>
+        </header>
+        <section class="profile-details">
+
+            <ul>
+                <h3>Profile details</h3>
+                <li><span>Name</span>: <span>John Doe</span></li>
+                <li><span>Admission Number</span>: <span>45547rt</span></li>
+                <li><span>Sex</span>: <span>Male</span></li>
+                <li><span>Marital Statue</span>: <span>Single</span></li>
+                <li><span>Religion</span>: <span>Christianity</span></li>
+                <li><span>Date of Birth</span>: <span>27 March 2000</span></li>
+                <li><span>Home Town</span>: <span>Choba</span></li>
+                <li><span>Nationality</span>: <span>Nigerian</span></li>
+                <li><span>State</span>: <span>Rivers State</span></li>
+                <li><span>LGA</span>: <span>Obio-Akpor</span></li>
+                <li><span>Address</span>: <span>nil</span></li>
+                <li><span>Email</span>: <span>jackson@email.com</span></li>
+                <li><span>User Category</span>: <span>Student</span></li>
+                <li><span>Contact Number</span>: <span>08056692175</span></li>
+            </ul>
+            <ul>
+                <h3>Course Details</h3>
+                <li><span>Current Course</span>: <span>Nil</span></li>
+                <li><span>Admission Year</span>: <span>Nil</span></li>
+                <li><span>Academic Session</span>: <span>Nil</span></li>
+                <li><span>Completed Courses</span>: <span>Nil</span></li>
+                <li><span>Certificates</span>: <span>Nil</span></li>
+            </ul>
+        </section>
+    </main>
+    <section class="popover logout-popover hide-popover">
+        <div class="result-table popover-content">
+            <p>Are you sure you want to log out?</p>
+            <div class="logout-options">
+                <button data-close-logout-popover>Cancel</button>
+                <a href="/signin.html">Logout</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
