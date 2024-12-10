@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="/js/main.js"></script>
+</head>
+
+<body>
+    <nav data-navigation>
+        <div class="wrapper container">
+            <!-- LOGO CONTAINER  -->
+            <div class="logo-container">
+                <a href="/index.html" aria-label="logo image" class="logo"><img src="/assets/images/logo.webp"
+                        alt="logo"></a>
+                <!-- BUTTON TO TOGGLE NAVIGATION ON MOBILE SCREEN -->
+                <div class="open-nav toggle-mobile-nav">
+                    <div class="bar"></div>
+                    <div class="bar alt"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <ul class="nav-items display-none" aria-expanded="true" data-searchbar-opened="false">
+                <!-- NAVIGATION LINKS  -->
+                <div class="responsive-nav-wrapper">
+                    <!-- HOME PAGE LINK  -->
+                    <li><a href="/">Home</a></li>
+                    <!-- PROGRAMS PAGE WITH DROPDOWN LINK  -->
+
+                    <!-- ABOUT PAGE LINK  -->
+                    <li><a href="/results.html">Results</a></li>
+                    <!-- MEDIA PAGE LINK  -->
+
+                    <!-- CONTACT PAGE LINK  -->
+                    <li><a href="/registered-courses.html">Registered Courses</a></li>
+                    <li><a href="/certificates.html">Certificates</a></li>
+                    <li><a href="/notififcations.html">Notifications</a></li>
+                    <!-- SEARCHBAR  -->
+                    <li class="logout"><button data-open-logout-popover>
+                            Log Out
+                        </button></li>
+
+
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="page-header">Resources</h1>
+        <section class="library-container">
+            <div class="library-card">
+                <div class="card-image">
+
+                    <img src="/assets/images/certificate.webp" alt="library-document-image">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">library title</h3>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aut
+                        consectetur molestias quia ullam!</p>
+                </div>
+            </div>
+            <div class="library-card">
+                <div class="card-image">
+
+                    <img src="/assets/images/certificate.webp" alt="library-document-image">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">library title</h3>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aut
+                        consectetur molestias quia ullam!</p>
+                </div>
+            </div>
+            <div class="library-card">
+                <div class="card-image">
+
+                    <img src="/assets/images/certificate.webp" alt="library-document-image">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">library title</h3>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aut
+                        consectetur molestias quia ullam!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="popover hide-popover results">
+        <div class="result-table popover-content">
+            <header>
+                <div class="close-popover"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 12.8806L12.8806 1.00002" stroke="#38393A" stroke-width="1.68017"
+                            stroke-linecap="round" />
+                        <path d="M1 1.11938L12.8806 13" stroke="#38393A" stroke-width="1.68017"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+                <p>Advanced Petroleum Engineering</p>
+            </header>
+            <div class="certificate-img">
+                <img src="/assets/images/certificate.webp" alt="certificate thumbnail" width="366" height="255"
+                    loading="lazy">
+            </div>
+            <a href="/assets/images/certificate.webp" download="Certificate"
+                class="view-certificate-btn cta-btn">Download
+                Certificate</a>
+        </div>
+    </section>
+    <section class="popover logout-popover hide-popover">
+        <div class="result-table popover-content">
+            <p>Are you sure you want to log out?</p>
+            <div class="logout-options">
+                <button data-close-logout-popover>Cancel</button>
+                <a href="/signin.html">Logout</a>
+            </div>
+        </div>
+    </section>
+    <script>
+
+    </script>
+</body>
+
+</html>
