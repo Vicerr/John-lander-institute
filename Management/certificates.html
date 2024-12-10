@@ -53,7 +53,7 @@
         <h1 class="page-header">Certificates</h1>
         <section class="card-container certificate">
             <div class="wrapper">
-                <div class="card">
+                <div class="card" data-view-certificate>
                     <div class="card-image-container">
                         <img src="/assets/images/certificate.webp" width="339.67" height="206" alt="image">
                     </div>
@@ -62,7 +62,7 @@
                         <p>Completed July 2025</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-view-certificate>
                     <div class="card-image-container">
                         <img src="/assets/images/certificate.webp" width="339.67" height="206" alt="image">
                     </div>
@@ -71,7 +71,7 @@
                         <p>Completed July 2025</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-view-certificate>
                     <div class="card-image-container">
                         <img src="/assets/images/certificate.webp" width="339.67" height="206" alt="image">
                     </div>
@@ -80,11 +80,31 @@
                         <p>Completed July 2025</p>
                     </div>
                 </div>
-
-
             </div>
         </section>
     </main>
+    <section class="popover hide-popover results">
+        <div class="result-table popover-content">
+            <header>
+                <div class="close-popover"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 12.8806L12.8806 1.00002" stroke="#38393A" stroke-width="1.68017"
+                            stroke-linecap="round" />
+                        <path d="M1 1.11938L12.8806 13" stroke="#38393A" stroke-width="1.68017"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+                <p>Advanced Petroleum Engineering</p>
+            </header>
+            <div class="certificate-img">
+                <img src="/assets/images/certificate.webp" alt="certificate thumbnail" width="366" height="255"
+                    loading="lazy">
+            </div>
+            <a href="/assets/images/certificate.webp" download="Certificate"
+                class="view-certificate-btn cta-btn">Download
+                Certificate</a>
+        </div>
+    </section>
     <section class="popover logout-popover hide-popover">
         <div class="result-table popover-content">
             <p>Are you sure you want to log out?</p>
@@ -94,6 +114,24 @@
             </div>
         </div>
     </section>
+    <script>
+        const closePopoverBtn = document.querySelectorAll(".close-popover")
+        closePopoverBtn.forEach((button) => {
+            button.addEventListener("click", () => {
+                button.closest(".popover").classList.add("hide-popover")
+            })
+        })
+        const viewCertificateBtns = document.querySelectorAll("[data-view-certificate]")
+        viewCertificateBtns.forEach(btn => {
+
+            btn.addEventListener("click", () => {
+                document.querySelector(".popover:has(.certificate-img").classList.remove("hide-popover")
+            })
+        })
+
+
+
+    </script>
 </body>
 
 </html>
