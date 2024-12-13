@@ -1,0 +1,83 @@
+.logo-image-container {
+    width: 178px;
+    height: 47px;
+    margin-inline: auto;
+}
+
+.navigation-title {
+    text-align: center;
+    margin-block: .6em;
+    font-size: 12px;
+    color: #4A4C4C;
+    font-weight: 500;
+}
+
+.nav-section {
+    margin-top: 1rem;
+}
+
+.nav-section-header {
+    color: #848787;
+    font-size: 12px;
+    margin-block: .2em;
+    font-weight: 500;
+    margin-left: 1rem;
+}
+
+.navigation-content {
+    // make nav stick to top
+    position: sticky;
+    top: 0;
+    align-self: top;
+    height: 100vh;
+    overflow-y: auto;
+
+    // customize scroll bar 
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+
+    $transition-durarion: .3s;
+
+    .nav-link a {
+        display: flex;
+        text-decoration: none;
+        gap: 8px;
+        align-items: center;
+        padding: 1em;
+        font-size: 14px;
+        color: inherit;
+        transition: border-right 50ms linear, color $transition-durarion ease-in-out, background-color $transition-durarion ease-in-out;
+
+        svg #Icon-Set {
+            fill: #5D5F5F;
+            transition: fill $transition-durarion ease-in-out;
+        }
+
+        &:hover:not(.active),
+        &:hover:not(.active) svg #Icon-Set {
+            background-color: $nav-link-bg-hover-color;
+            color: $primary-clr-dark;
+            border-right: 5px solid $primary-clr-dark;
+            fill: $primary-clr-dark;
+        }
+
+        &.active {
+            svg #Icon-Set {
+                fill: #5D5F5F;
+                transition: fill $transition-durarion ease-in-out;
+            }
+
+            background-color: $nav-link-bg-hover-color;
+            color: $primary-clr-dark;
+            border-right: 5px solid $primary-clr-dark;
+            fill: $primary-clr-dark;
+        }
+    }
+}

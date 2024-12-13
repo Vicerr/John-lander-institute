@@ -1,0 +1,302 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F5F5F5;
+  min-height: 100dvh;
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+}
+
+button,
+label,
+input,
+textarea {
+  font-family: inherit;
+}
+
+.navigation-content {
+  background-color: #Ffffff;
+  padding-block: 1rem;
+  height: 100vh;
+}
+
+.main-content {
+  padding: 3rem 2.5rem;
+}
+.main-content > .wrapper {
+  background-color: #FDFCFC;
+  border-radius: 10px;
+  padding: 1.2rem 1rem;
+}
+
+.content-table-header {
+  display: grid;
+  gap: 2rem;
+}
+
+.upper-header-section,
+.lower-header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-table-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-table-title p {
+  color: #5D5F5F;
+  font-weight: 500;
+}
+.section-table-title .svg-wrapper {
+  padding: 0.4em;
+  border-radius: 4px;
+  box-shadow: 0px 4px 9.2px 2px rgba(0, 0, 0, 0.0588235294);
+}
+
+.table-actions {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.table-search-input {
+  width: 320px;
+  height: 44px;
+  display: flex;
+  border-radius: 10px;
+  overflow: clip;
+  background-color: inherit;
+  border: 1px solid #DCDDDD;
+}
+.table-search-input input {
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  padding-inline: 4px;
+  border: none;
+}
+.table-search-input input::-moz-placeholder {
+  color: #DCDDDD;
+}
+.table-search-input input::placeholder {
+  color: #DCDDDD;
+}
+.table-search-input input:focus {
+  outline: none;
+}
+.table-search-input button {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  width: 60px;
+  display: grid;
+  place-content: center;
+}
+
+.table-overview {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.table-overview thead {
+  font-weight: 700;
+  color: #373939;
+}
+.table-overview thead tr {
+  text-align: left;
+  border-bottom: 1px solid #DCDDDD;
+}
+.table-overview td,
+.table-overview th {
+  padding-block: 14px;
+}
+.table-overview tbody {
+  color: #4A4C4C;
+  font-size: 14px;
+  font-weight: 500;
+}
+.table-overview tbody tr:not(:last-child) {
+  border-bottom: 1px solid #DCDDDD;
+}
+.table-overview .action-btn {
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: transparent;
+}
+
+.link-button {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  padding: 0.625em 0.75em;
+  background-color: #0b8342;
+  border-radius: 8px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  font-size: 12px;
+}
+.link-button:hover {
+  background-color: #005925;
+}
+
+svg {
+  display: grid;
+  place-content: center;
+}
+
+.button {
+  border: 1px solid #0b8342;
+  color: white;
+  padding: 0.625em 0.75em;
+  background-color: #0b8342;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.button svg path {
+  stroke: white;
+  transition: stroke 0.3s ease-in-out;
+}
+.button:hover, .button:hover svg path {
+  background-color: #005925;
+  stroke: #005925;
+}
+.button.alt {
+  background-color: inherit;
+  color: #0b8342;
+}
+.button.alt svg path {
+  stroke: #0b8342;
+}
+.button.alt:hover, .button.alt:hover svg path {
+  background-color: #005925;
+  color: white;
+  stroke: white;
+}
+
+.pagination-wrapper {
+  margin-block: 1rem;
+  background-color: white;
+  padding: 12px 7px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-inline: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.pagination-wrapper button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination-item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  transition: background-color 0.1s ease-in-out;
+}
+.pagination-item.active {
+  background-color: #DCDDDD;
+}
+.pagination-item:hover:not(.active) {
+  background-color: #DCDDDD;
+  cursor: pointer;
+}
+
+.logo-image-container {
+  width: 178px;
+  height: 47px;
+  margin-inline: auto;
+}
+
+.navigation-title {
+  text-align: center;
+  margin-block: 0.6em;
+  font-size: 12px;
+  color: #4A4C4C;
+  font-weight: 500;
+}
+
+.nav-section {
+  margin-top: 1rem;
+}
+
+.nav-section-header {
+  color: #848787;
+  font-size: 12px;
+  margin-block: 0.2em;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+.navigation-content {
+  position: sticky;
+  top: 0;
+  align-self: top;
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.navigation-content::-webkit-scrollbar {
+  width: 10px;
+}
+.navigation-content::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+.navigation-content .nav-link a {
+  display: flex;
+  text-decoration: none;
+  gap: 8px;
+  align-items: center;
+  padding: 1em;
+  font-size: 14px;
+  color: inherit;
+  transition: border-right 50ms linear, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.navigation-content .nav-link a svg #Icon-Set {
+  fill: #5D5F5F;
+  transition: fill 0.3s ease-in-out;
+}
+.navigation-content .nav-link a:hover:not(.active), .navigation-content .nav-link a:hover:not(.active) svg #Icon-Set {
+  background-color: #EFFCF6;
+  color: #005925;
+  border-right: 5px solid #005925;
+  fill: #005925;
+}
+.navigation-content .nav-link a.active {
+  background-color: #EFFCF6;
+  color: #005925;
+  border-right: 5px solid #005925;
+  fill: #005925;
+}
+.navigation-content .nav-link a.active svg #Icon-Set {
+  fill: #5D5F5F;
+  transition: fill 0.3s ease-in-out;
+}/*# sourceMappingURL=main.css.map */
