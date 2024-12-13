@@ -28,7 +28,9 @@ textarea {
     font-family: inherit;
 }
 
-
+.hide-dropdown {
+    display: none;
+}
 
 .navigation-content {
     background-color: #Ffffff;
@@ -259,5 +261,37 @@ svg {
     &:hover:not(.active) {
         background-color: $light-clr;
         cursor: pointer;
+    }
+}
+
+.dropdown-container {
+    position: relative;
+
+    .dropdown-box {
+        position: absolute;
+        top: 120%;
+        font-size: 14px;
+        right: 10%;
+        text-align: left;
+        background-color: white;
+        width: 200px;
+        border-radius: 8px;
+        overflow: clip;
+        z-index: 1;
+
+        &.anchor-at-edge {
+
+            right: 100%;
+        }
+    }
+
+    .dropdown-item {
+        padding: 1em;
+        transition: background-color .1s ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $light-clr;
+        }
     }
 }

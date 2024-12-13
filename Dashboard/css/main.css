@@ -21,6 +21,10 @@ textarea {
   font-family: inherit;
 }
 
+.hide-dropdown {
+  display: none;
+}
+
 .navigation-content {
   background-color: #Ffffff;
   padding-block: 1rem;
@@ -228,6 +232,33 @@ svg {
 .pagination-item:hover:not(.active) {
   background-color: #DCDDDD;
   cursor: pointer;
+}
+
+.dropdown-container {
+  position: relative;
+}
+.dropdown-container .dropdown-box {
+  position: absolute;
+  top: 120%;
+  font-size: 14px;
+  right: 10%;
+  text-align: left;
+  background-color: white;
+  width: 200px;
+  border-radius: 8px;
+  overflow: clip;
+  z-index: 1;
+}
+.dropdown-container .dropdown-box.anchor-at-edge {
+  right: 100%;
+}
+.dropdown-container .dropdown-item {
+  padding: 1em;
+  transition: background-color 0.1s ease;
+}
+.dropdown-container .dropdown-item:hover {
+  cursor: pointer;
+  background-color: #DCDDDD;
 }
 
 .logo-image-container {
