@@ -40,106 +40,6 @@ textarea {
   padding: 1.2rem 1rem;
 }
 
-.content-table-header {
-  display: grid;
-  gap: 2rem;
-}
-
-.upper-header-section,
-.lower-header-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.section-table-title {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.section-table-title p {
-  color: #5D5F5F;
-  font-weight: 500;
-}
-.section-table-title .svg-wrapper {
-  padding: 0.4em;
-  border-radius: 4px;
-  box-shadow: 0px 4px 9.2px 2px rgba(0, 0, 0, 0.0588235294);
-}
-
-.table-actions {
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.table-search-input {
-  width: 320px;
-  height: 44px;
-  display: flex;
-  border-radius: 10px;
-  overflow: clip;
-  background-color: inherit;
-  border: 1px solid #DCDDDD;
-}
-.table-search-input input {
-  background-color: inherit;
-  width: 100%;
-  height: 100%;
-  padding-inline: 4px;
-  border: none;
-}
-.table-search-input input::-moz-placeholder {
-  color: #DCDDDD;
-}
-.table-search-input input::placeholder {
-  color: #DCDDDD;
-}
-.table-search-input input:focus {
-  outline: none;
-}
-.table-search-input button {
-  border: none;
-  background-color: inherit;
-  cursor: pointer;
-  width: 60px;
-  display: grid;
-  place-content: center;
-}
-
-.table-overview {
-  border-collapse: collapse;
-  width: 100%;
-  margin-top: 1.5rem;
-}
-.table-overview thead {
-  font-weight: 700;
-  color: #373939;
-}
-.table-overview thead tr {
-  text-align: left;
-  border-bottom: 1px solid #DCDDDD;
-}
-.table-overview td,
-.table-overview th {
-  padding-block: 14px;
-}
-.table-overview tbody {
-  color: #4A4C4C;
-  font-size: 14px;
-  font-weight: 500;
-}
-.table-overview tbody tr:not(:last-child) {
-  border-bottom: 1px solid #DCDDDD;
-}
-.table-overview .action-btn {
-  display: grid;
-  place-content: center;
-  cursor: pointer;
-  background-color: transparent;
-  border: transparent;
-}
-
 .link-button {
   display: inline-flex;
   gap: 4px;
@@ -150,10 +50,23 @@ textarea {
   background-color: #0b8342;
   border-radius: 8px;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  font-size: 12px;
+  font-size: 0.85rem;
 }
 .link-button:hover {
   background-color: #005925;
+}
+.link-button.alt {
+  background-color: inherit;
+  color: #0b8342;
+  border: 1px solid #0b8342;
+}
+.link-button.alt svg path {
+  stroke: #0b8342;
+}
+.link-button.alt:hover, .link-button.alt:hover svg path {
+  background-color: #005925;
+  color: white;
+  stroke: white;
 }
 
 svg {
@@ -167,7 +80,7 @@ svg {
   padding: 0.625em 0.75em;
   background-color: #0b8342;
   border-radius: 8px;
-  font-size: 12px;
+  font-size: 0.85rem;
   cursor: pointer;
   display: inline-flex;
   gap: 4px;
@@ -196,69 +109,6 @@ svg {
   background-color: #005925;
   color: white;
   stroke: white;
-}
-
-.pagination-wrapper {
-  margin-block: 1rem;
-  background-color: white;
-  padding: 12px 7px;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: center;
-  margin-inline: auto;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.pagination-wrapper button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.pagination-item {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  transition: background-color 0.1s ease-in-out;
-}
-.pagination-item.active {
-  background-color: #DCDDDD;
-}
-.pagination-item:hover:not(.active) {
-  background-color: #DCDDDD;
-  cursor: pointer;
-}
-
-.dropdown-container {
-  position: relative;
-}
-.dropdown-container .dropdown-box {
-  position: absolute;
-  top: 120%;
-  font-size: 14px;
-  right: 10%;
-  text-align: left;
-  background-color: white;
-  width: 200px;
-  border-radius: 8px;
-  overflow: clip;
-  z-index: 1;
-}
-.dropdown-container .dropdown-box.anchor-at-edge {
-  right: 100%;
-}
-.dropdown-container .dropdown-item {
-  padding: 1em;
-  transition: background-color 0.1s ease;
-}
-.dropdown-container .dropdown-item:hover {
-  cursor: pointer;
-  background-color: #DCDDDD;
 }
 
 .logo-image-container {
@@ -318,7 +168,6 @@ svg {
 .navigation-content .nav-link a:hover:not(.active), .navigation-content .nav-link a:hover:not(.active) svg #Icon-Set {
   background-color: #EFFCF6;
   color: #005925;
-  border-right: 5px solid #005925;
   fill: #005925;
 }
 .navigation-content .nav-link a.active {
@@ -330,4 +179,399 @@ svg {
 .navigation-content .nav-link a.active svg #Icon-Set {
   fill: #5D5F5F;
   transition: fill 0.3s ease-in-out;
+}
+
+.breadcrumb-menu {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+.breadcrumb-menu .back-btn {
+  all: unset;
+  cursor: pointer;
+  border: 1.36px solid #373939;
+  border-radius: 50%;
+  width: 40px;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+}
+
+.content-table-header {
+  display: grid;
+  gap: 2rem;
+}
+
+.upper-header-section,
+.lower-header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-table-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-table-title p {
+  color: #5D5F5F;
+  font-weight: 500;
+}
+.section-table-title .svg-wrapper {
+  padding: 0.4em;
+  border-radius: 4px;
+  box-shadow: 0px 4px 9.2px 2px rgba(0, 0, 0, 0.0588235294);
+}
+
+.table-actions {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.table-search-input {
+  width: 320px;
+  height: 44px;
+  display: flex;
+  border-radius: 10px;
+  overflow: clip;
+  background-color: inherit;
+  border: 1px solid #DCDDDD;
+  transition: box-shadow 0.1s ease;
+}
+.table-search-input:focus-within {
+  box-shadow: 0px 0px 0px 4px lightblue;
+}
+.table-search-input input {
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  padding-inline: 4px;
+  border: none;
+}
+.table-search-input input::-moz-placeholder {
+  color: #DCDDDD;
+}
+.table-search-input input::placeholder {
+  color: #DCDDDD;
+}
+.table-search-input input:focus {
+  outline: none;
+}
+.table-search-input button {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  width: 60px;
+  display: grid;
+  place-content: center;
+}
+
+.table-overview {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.table-overview thead {
+  font-weight: 700;
+  color: #373939;
+}
+.table-overview thead tr {
+  text-align: left;
+  border-bottom: 1px solid #DCDDDD;
+}
+.table-overview td,
+.table-overview th {
+  padding-block: 14px;
+}
+.table-overview tbody {
+  color: #4A4C4C;
+  font-size: 14px;
+  font-weight: 500;
+}
+.table-overview tbody tr:not(:last-child) {
+  border-bottom: 1px solid #DCDDDD;
+}
+.table-overview .profile-cell {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+.table-overview .profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #DCDDDD;
+}
+.table-overview .profile-details {
+  display: grid;
+  font-weight: 500;
+}
+.table-overview .profile-name {
+  font-size: 0.875rem;
+  color: #4A4C4C;
+}
+.table-overview .profile-email {
+  font-size: 0.75rem;
+  color: #707273;
+}
+.table-overview .registered-courses-cell {
+  max-width: 200px;
+  flex-wrap: wrap;
+  gap: 0.2em;
+}
+.table-overview .registered-courses-cell span {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 4px;
+  padding: 8px;
+  background-color: #F3F4F4;
+}
+.table-overview .status {
+  color: var(--_text-clr);
+  background-color: var(--_bg-clr);
+  font-size: 0.75rem;
+  font-weight: 400;
+  padding-block: unset;
+  border-radius: 8px;
+  padding: 0.25rem 0.75rem;
+  display: inline-block;
+}
+.table-overview .status[data-status=active] {
+  --_textclr: #4BBA56;
+  --_bg-clr: #DBFFDF;
+}
+.table-overview .status[data-status=pending] {
+  --_textclr: #EDC803;
+  --_bg-clr: #F1E292;
+}
+.table-overview .status[data-status=inactive] {
+  --_textclr: #6E6E6E;
+  --_bg-clr: #E2E2E2;
+}
+.table-overview .action-btn {
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: transparent;
+}
+
+.pagination-wrapper {
+  margin-block: 1rem;
+  background-color: white;
+  padding: 12px 7px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-inline: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.pagination-wrapper button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination-button-container {
+  display: flex;
+  gap: 0.5em;
+}
+
+.pagination-item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  transition: background-color 0.1s ease-in-out;
+}
+.pagination-item.active {
+  background-color: #DCDDDD;
+}
+.pagination-item:hover:not(.active) {
+  background-color: #DCDDDD;
+  cursor: pointer;
+}
+
+.dropdown-container {
+  position: relative;
+}
+.dropdown-container .dropdown-box {
+  position: absolute;
+  top: 120%;
+  font-size: 14px;
+  right: 10%;
+  text-align: left;
+  background-color: white;
+  width: 200px;
+  border-radius: 8px;
+  overflow: clip;
+  z-index: 1;
+}
+.dropdown-container .dropdown-box.anchor-at-edge {
+  right: 100%;
+}
+.dropdown-container .dropdown-item {
+  padding: 1em;
+  transition: background-color 0.1s ease;
+}
+.dropdown-container .dropdown-item:hover {
+  cursor: pointer;
+  background-color: #DCDDDD;
+}
+
+.upload-title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #373939;
+  padding-block: 0.5rem;
+}
+
+.upload-form {
+  margin-top: 1rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.6em;
+}
+.form-group input,
+.form-group textarea,
+.form-group .image-input {
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #C5C7C7;
+  transition: box-shadow 0.1s ease;
+  min-height: 60px;
+  resize: none;
+  width: 100% !important;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group .image-input:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 4px lightblue;
+}
+.form-group input.image-input:hover,
+.form-group textarea.image-input:hover,
+.form-group .image-input.image-input:hover {
+  cursor: pointer;
+}
+.form-group input.high-input,
+.form-group textarea.high-input,
+.form-group .image-input.high-input {
+  background-color: white;
+  min-height: 150px;
+}
+.form-group.image-with-placeholder:focus-within .placeholder {
+  display: none;
+}
+.form-group.image-with-placeholder .placeholder-container {
+  cursor: pointer;
+  position: relative;
+}
+.form-group.image-with-placeholder .placeholder {
+  z-index: 1;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  position: absolute;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85em;
+  place-content: center;
+  color: #707273;
+}
+.form-group .uploaded-files-container {
+  display: flex;
+  font-size: 12px;
+  gap: 0.6em;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #DCDDDD;
+  padding: 8px;
+  gap: 0.4em;
+  border-radius: 4px;
+  color: #757575;
+}
+.form-group .uploaded-files-container p {
+  display: flex;
+}
+.form-group .uploaded-files-container button {
+  width: 20px;
+  aspect-ratio: 1;
+  background-color: inherit;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+}
+.form-group .uploaded-files-container button svg {
+  display: grid;
+  width: 18px;
+  height: 18px;
+  place-content: center;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 2rem;
+}
+.form-actions .link-button,
+.form-actions .button {
+  padding: 0.875rem;
+  justify-content: center;
+  width: 200px;
+}
+
+.custom-option-list {
+  position: relative;
+}
+.custom-option-list div {
+  position: relative;
+}
+
+.option-list {
+  width: 100% !important;
+  right: 0 !important;
+  top: 105% !important;
+}
+.option-list li {
+  font-size: 14px;
+  padding: 1rem;
+  transition: background-color 0.1s ease;
+}
+.option-list li:hover {
+  cursor: pointer;
+  background-color: #DCDDDD;
+}
+
+.custom-option-toggle-btn {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 30px;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  border: none;
+  aspect-ratio: 1;
 }/*# sourceMappingURL=main.css.map */

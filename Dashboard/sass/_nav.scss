@@ -64,7 +64,6 @@
         &:hover:not(.active) svg #Icon-Set {
             background-color: $nav-link-bg-hover-color;
             color: $primary-clr-dark;
-            border-right: 5px solid $primary-clr-dark;
             fill: $primary-clr-dark;
         }
 
@@ -79,5 +78,25 @@
             border-right: 5px solid $primary-clr-dark;
             fill: $primary-clr-dark;
         }
+    }
+}
+
+.breadcrumb-menu {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+
+    .back-btn {
+        all: unset;
+        cursor: pointer;
+        border: 1.36px solid #373939;
+        border-radius: 50%;
+        width: 40px;
+        aspect-ratio: 1;
+        display: grid;
+        place-content: center;
     }
 }

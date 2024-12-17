@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+@function px-to-rem($px) {
+    $base-font-size: 16px;
+    @return #{calc($px / $base-font-size)}rem;
+}
+
 $body-bg-clr: #F5F5F5;
 $nav-link-bg-hover-color: #EFFCF6;
 $primary-clr: #0b8342;
@@ -48,116 +53,6 @@ textarea {
     }
 }
 
-.content-table-header {
-    display: grid;
-    gap: 2rem;
-}
-
-.upper-header-section,
-.lower-header-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.section-table-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    p {
-        color: $primary-text-clr;
-        font-weight: 500;
-    }
-
-    .svg-wrapper {
-        padding: .4em;
-        border-radius: 4px;
-        box-shadow: 0px 4px 9.2px 2px #0000000F;
-    }
-}
-
-.table-actions {
-    display: inline-flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.table-search-input {
-    width: 320px;
-    height: 44px;
-    display: flex;
-    border-radius: 10px;
-    overflow: clip;
-    background-color: inherit;
-    border: 1px solid $light-clr;
-
-    input {
-        background-color: inherit;
-        width: 100%;
-        height: 100%;
-        padding-inline: 4px;
-        border: none;
-
-        &::placeholder {
-            color: $light-clr;
-        }
-
-        &:focus {
-            outline: none;
-        }
-    }
-
-    button {
-        border: none;
-        background-color: inherit;
-        cursor: pointer;
-        width: 60px;
-        display: grid;
-        place-content: center;
-
-    }
-}
-
-.table-overview {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 1.5rem;
-
-    thead {
-        font-weight: 700;
-        color: #373939;
-
-        tr {
-            text-align: left;
-            border-bottom: 1px solid $light-clr;
-        }
-    }
-
-    td,
-    th {
-        padding-block: 14px;
-    }
-
-    tbody {
-        color: #4A4C4C;
-        font-size: 14px;
-        font-weight: 500;
-
-        tr:not(:last-child) {
-            border-bottom: 1px solid $light-clr;
-        }
-    }
-
-    .action-btn {
-        display: grid;
-        place-content: center;
-        cursor: pointer;
-        background-color: transparent;
-        border: transparent;
-    }
-}
-
 .link-button {
     display: inline-flex;
     gap: 4px;
@@ -168,10 +63,27 @@ textarea {
     background-color: $primary-clr;
     border-radius: 8px;
     transition: color .3s ease-in-out, background-color .3s ease-in-out;
-    font-size: 12px;
+    font-size: .85rem;
 
     &:hover {
         background-color: $primary-clr-dark;
+    }
+
+    &.alt {
+        background-color: inherit;
+        color: $primary-clr;
+        border: 1px solid $primary-clr;
+
+        svg path {
+            stroke: $primary-clr;
+        }
+
+        &:hover,
+        &:hover svg path {
+            background-color: $primary-clr-dark;
+            color: white;
+            stroke: white;
+        }
     }
 
 }
@@ -187,7 +99,7 @@ svg {
     padding: 0.625em 0.75em;
     background-color: $primary-clr;
     border-radius: 8px;
-    font-size: 12px;
+    font-size: .85rem;
     cursor: pointer;
     display: inline-flex;
     gap: 4px;
@@ -220,78 +132,6 @@ svg {
             background-color: $primary-clr-dark;
             color: white;
             stroke: white;
-        }
-    }
-}
-
-
-.pagination-wrapper {
-    margin-block: 1rem;
-    background-color: white;
-    padding: 12px 7px;
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    align-items: center;
-    margin-inline: auto;
-    width: fit-content;
-
-    button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-    }
-}
-
-
-.pagination-item {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    transition: background-color .1s ease-in-out;
-
-    &.active {
-        background-color: $light-clr;
-    }
-
-    &:hover:not(.active) {
-        background-color: $light-clr;
-        cursor: pointer;
-    }
-}
-
-.dropdown-container {
-    position: relative;
-
-    .dropdown-box {
-        position: absolute;
-        top: 120%;
-        font-size: 14px;
-        right: 10%;
-        text-align: left;
-        background-color: white;
-        width: 200px;
-        border-radius: 8px;
-        overflow: clip;
-        z-index: 1;
-
-        &.anchor-at-edge {
-
-            right: 100%;
-        }
-    }
-
-    .dropdown-item {
-        padding: 1em;
-        transition: background-color .1s ease;
-
-        &:hover {
-            cursor: pointer;
-            background-color: $light-clr;
         }
     }
 }

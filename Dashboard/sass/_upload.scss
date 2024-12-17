@@ -1,0 +1,163 @@
+.upload-title {
+    font-size: px-to-rem(28px);
+    font-weight: 500;
+    color: #373939;
+    padding-block: .5rem;
+}
+
+.upload-form {
+    margin-top: 1rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.form-group {
+    display: grid;
+    gap: .6em;
+
+    input,
+    textarea,
+    .image-input {
+        padding: px-to-rem(8px) px-to-rem(12px);
+        border-radius: 10px;
+        border: 1px solid #C5C7C7;
+        transition: box-shadow .1s ease;
+        min-height: 60px;
+        resize: none;
+        width: 100% !important;
+
+
+        &:focus {
+            outline: none;
+            box-shadow: 0px 0px 0px 4px lightblue;
+        }
+
+        &.image-input {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &.high-input {
+            background-color: white;
+            min-height: 150px;
+        }
+    }
+
+    &.image-with-placeholder {
+
+        &:focus-within .placeholder {
+            display: none;
+        }
+
+        .placeholder-container {
+            cursor: pointer;
+            position: relative;
+
+        }
+
+        .placeholder {
+            z-index: 1;
+            bottom: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .85em;
+            place-content: center;
+            color: #707273;
+        }
+    }
+
+    .uploaded-files-container {
+        display: flex;
+        font-size: 12px;
+        gap: .6em;
+        width: fit-content;
+        align-items: center;
+        background-color: white;
+        border: 1px solid $light-clr;
+        padding: 8px;
+        gap: .4em;
+        border-radius: 4px;
+        color: #757575;
+
+        p {
+            display: flex;
+        }
+
+        button {
+            width: 20px;
+            aspect-ratio: 1;
+            background-color: inherit;
+            cursor: pointer;
+            border: none;
+
+            svg {
+                display: grid;
+                width: 18px;
+                height: 18px;
+                place-content: center;
+
+            }
+
+            display: inline-block;
+
+        }
+    }
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 2rem;
+
+    .link-button,
+    .button {
+        padding: px-to-rem(14px);
+        justify-content: center;
+        width: 200px;
+    }
+}
+
+.custom-option-list {
+    position: relative;
+
+    div {
+        position: relative;
+    }
+}
+
+.option-list {
+    width: 100% !important;
+    right: 0 !important;
+    top: 105% !important;
+
+    li {
+        font-size: 14px;
+        padding: 1rem;
+        transition: background-color .1s ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $light-clr;
+        }
+    }
+}
+
+.custom-option-toggle-btn {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 30px;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    border: none;
+    aspect-ratio: 1;
+}
