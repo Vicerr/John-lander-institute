@@ -99,6 +99,10 @@
         font-size: 14px;
         font-weight: 500;
 
+        tr:hover {
+            cursor: pointer;
+        }
+
         tr:not(:last-child) {
             border-bottom: 1px solid $light-clr;
         }
@@ -256,9 +260,23 @@
         padding: 1em;
         transition: background-color .1s ease;
 
+        a {
+            all: unset;
+            display: block;
+        }
+
         &:hover {
             cursor: pointer;
             background-color: $light-clr;
         }
     }
+}
+
+.user-management-table {
+    tbody {
+        tr:hover {
+            cursor: pointer;
+        }
+    }
+
 }

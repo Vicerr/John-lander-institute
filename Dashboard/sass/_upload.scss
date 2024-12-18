@@ -15,6 +15,16 @@
     display: grid;
     gap: .6em;
 
+    label {
+        color: #5D5F5F;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    input::placeholder {
+        font-size: .80rem;
+    }
+
     input,
     textarea,
     .image-input {
@@ -111,6 +121,8 @@
 }
 
 .form-actions {
+
+
     display: flex;
     gap: 12px;
     margin-top: 2rem;
@@ -120,6 +132,17 @@
         padding: px-to-rem(14px);
         justify-content: center;
         width: 200px;
+    }
+}
+
+.split-form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    >* {
+        flex: 1;
+        min-width: 200px;
     }
 }
 

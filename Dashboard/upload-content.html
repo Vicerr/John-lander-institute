@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staff Management</title>
+    <title>Upload Blog</title>
     <link rel="stylesheet" href="/css/main.css">
     <script defer src="/js/main.js"></script>
     <style>
@@ -213,237 +213,108 @@
         </div>
     </nav>
     <main class="main-content">
+        <div class="breadcrumb-menu">
+            <button class="back-btn">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.79089 5.48145L3.27271 10.9996L8.79089 16.5178" stroke="#373939" stroke-width="1.36364"
+                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M18.7272 11H3.42725" stroke="#373939" stroke-width="1.36364" stroke-miterlimit="10"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+            </button>
+
+            <p>Add Blog</p>
+        </div>
         <div class="wrapper">
-            <header class="content-table-header">
-                <div class="upper-header-section">
-                    <div class="section-table-title">
-                        <div class="svg-wrapper">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M6.10671 7.24665C6.04004 7.23998 5.96004 7.23998 5.88671 7.24665C4.30004 7.19331 3.04004 5.89331 3.04004 4.29331C3.04004 2.65998 4.36004 1.33331 6.00004 1.33331C7.63337 1.33331 8.96004 2.65998 8.96004 4.29331C8.95337 5.89331 7.69337 7.19331 6.10671 7.24665Z"
-                                    stroke="#009D17" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M10.9402 2.66669C12.2335 2.66669 13.2735 3.71335 13.2735 5.00002C13.2735 6.26002 12.2735 7.28669 11.0268 7.33335C10.9735 7.32669 10.9135 7.32669 10.8535 7.33335"
-                                    stroke="#009D17" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M2.77348 9.70669C1.16014 10.7867 1.16014 12.5467 2.77348 13.62C4.60681 14.8467 7.61348 14.8467 9.44681 13.62C11.0601 12.54 11.0601 10.78 9.44681 9.70669C7.62014 8.48669 4.61348 8.48669 2.77348 9.70669Z"
-                                    stroke="#009D17" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M12.2266 13.3333C12.7066 13.2333 13.1599 13.04 13.5332 12.7533C14.5732 11.9733 14.5732 10.6866 13.5332 9.90665C13.1666 9.62665 12.7199 9.43998 12.2466 9.33331"
-                                    stroke="#009D17" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-
-
-                        </div>
-                        <p>Staff Management</p>
+            <div class="upload-content">
+                <h2 class="upload-title">Blog Details</h2>
+                <form action="" id="form" class="upload-form">
+                    <div class="form-group">
+                        <label for="eventTitle">Event Title</label>
+                        <input type="text" placeholder="Enter name of event here">
                     </div>
-                    <a href="javascript:void(0)" class="link-button alt">
-                        <span>
-
-                        </span>
-                        <span>Invite</span>
-                    </a>
-                </div>
-                <div class="lower-header-section">
-                    <a href="" class="link-button">
-                        <span>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.6875 11.1462L12.375 14.8338L16.0626 11.1462" stroke="white"
-                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M12.375 14.8337V5.00024" stroke="white" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M5 17.292C9.7815 18.8899 14.9686 18.8899 19.7501 17.292" stroke="white"
-                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-
-                        </span>
-                        <span>Download CSV</span>
-                    </a>
-                    <div class="table-actions">
-                        <form action="" class="table-search-input">
-                            <button>
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                    <div class="form-group image-with-placeholder">
+                        <label for="eventTitle">Upload Image</label>
+                        <div class="placeholder-container">
+                            <div class="placeholder">
+                                <svg width="73" height="72" viewBox="0 0 73 72" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
-                                        d="M8.62451 15.751C12.5595 15.751 15.7495 12.561 15.7495 8.62598C15.7495 4.69095 12.5595 1.50098 8.62451 1.50098C4.68948 1.50098 1.49951 4.69095 1.49951 8.62598C1.49951 12.561 4.68948 15.751 8.62451 15.751Z"
-                                        stroke="#DCDDDD" stroke-width="1.125" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M16.4995 16.501L14.9995 15.001" stroke="#DCDDDD" stroke-width="1.125"
+                                        d="M63.41 3H54.59C50.78 3 48.5 5.28 48.5 9.09V17.91C48.5 21.72 50.78 24 54.59 24H63.41C67.22 24 69.5 21.72 69.5 17.91V9.09C69.5 5.28 67.22 3 63.41 3ZM64.07 12.93C63.71 13.29 63.23 13.47 62.75 13.47C62.27 13.47 61.79 13.29 61.43 12.93L60.89 12.39V19.11C60.89 20.16 60.05 21 59 21C57.95 21 57.11 20.16 57.11 19.11V12.39L56.57 12.93C55.85 13.65 54.65 13.65 53.93 12.93C53.21 12.21 53.21 11.01 53.93 10.29L57.68 6.54C57.83 6.39 58.04 6.27 58.25 6.18C58.31 6.15 58.37 6.15 58.43 6.12C58.58 6.06 58.73 6.03 58.91 6.03C58.97 6.03 59.03 6.03 59.09 6.03C59.3 6.03 59.48 6.06 59.69 6.15C59.72 6.15 59.72 6.15 59.75 6.15C59.96 6.24 60.14 6.36 60.29 6.51C60.32 6.54 60.32 6.54 60.35 6.54L64.1 10.29C64.82 11.01 64.82 12.21 64.07 12.93Z"
+                                        fill="#C5C7C7" />
+                                    <path
+                                        d="M27.5004 31.1404C31.4437 31.1404 34.6404 27.9437 34.6404 24.0004C34.6404 20.057 31.4437 16.8604 27.5004 16.8604C23.557 16.8604 20.3604 20.057 20.3604 24.0004C20.3604 27.9437 23.557 31.1404 27.5004 31.1404Z"
+                                        fill="#C5C7C7" />
+                                    <path
+                                        d="M63.41 24H62V37.83L61.61 37.5C59.27 35.49 55.49 35.49 53.15 37.5L40.67 48.21C38.33 50.22 34.55 50.22 32.21 48.21L31.19 47.37C29.06 45.51 25.67 45.33 23.27 46.95L12.05 54.48C11.39 52.8 11 50.85 11 48.57V23.43C11 14.97 15.47 10.5 23.93 10.5H48.5V9.09C48.5 7.89 48.71 6.87 49.19 6H23.93C13.01 6 6.5 12.51 6.5 23.43V48.57C6.5 51.84 7.07 54.69 8.18 57.09C10.76 62.79 16.28 66 23.93 66H49.07C59.99 66 66.5 59.49 66.5 48.57V23.31C65.63 23.79 64.61 24 63.41 24Z"
+                                        fill="#C5C7C7" />
+                                </svg>
+
+                                <p>Drag image or upload from files</p>
+                            </div>
+
+                            <div ondrop="handleDrop(event)" ondragover="allowDrop(event)"
+                                class="image-input high-input">
+                            </div>
+                        </div>
+
+                        <div class="uploaded-files-container">
+                            <p>No file selected</p>
+                            <button type="button" data-delete-uploaded-item>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#5f6368">
+                                    <path
+                                        d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="eventTitle">Date</label>
+                        <div>
+                            <input type="date" placeholder="Enter name of event here">
+
+                        </div>
+
+                    </div>
+                    <div class="form-group dropdown-container custom-option-list ">
+                        <label for="eventTitle">Type</label>
+                        <div>
+                            <input data-dropdown-toggle-btn id="option-value" type="text" value="" readonly
+                                placeholder="Enter name of event here">
+                            <span data-dropdown-toggle-btn role="button" class="custom-option-toggle-btn">
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.6668 1.33398L6.82508 5.62094C6.37137 6.12722 5.62895 6.12722 5.17525 5.62094L1.3335 1.33398"
+                                        stroke="#AFB1B1" stroke-width="1.5" stroke-miterlimit="10"
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
 
-                            </button>
-                            <input type="search" id="searchInput" placeholder="Search">
-                        </form>
-                        <div class="dropdown-container" data-table-action>
-                            <button class="button alt" data-dropdown-toggle-btn="table-action">
-                                <span>Sort By</span>
-                                <span>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M18 10L13.0606 15.5118C12.4773 16.1627 11.5227 16.1627 10.9394 15.5118L6 10"
-                                            stroke="#52AD6E" stroke-width="1.71429" stroke-miterlimit="10"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                            </button>
-                            <div class="dropdown-box hide-dropdown">
-                                <p class="dropdown-item">Acending Order</p>
-                                <p class="dropdown-item">Decending Order</p>
-                                <p class="dropdown-item">Last Updated</p>
-                                <p class="dropdown-item">First Updated</p>
-                            </div>
+                            </span>
+
                         </div>
-                        <div class="dropdown-container" data-table-action>
-                            <button class="button alt" data-dropdown-toggle-btn>
-                                <span>Filter</span>
-                                <span>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3 7H21" stroke="#52AD6E" stroke-width="1.5" stroke-linecap="round" />
-                                        <path d="M6 12H18" stroke="#52AD6E" stroke-width="1.5" stroke-linecap="round" />
-                                        <path d="M10 17H14" stroke="#52AD6E" stroke-width="1.5"
-                                            stroke-linecap="round" />
-                                    </svg>
-
-                                </span>
-                            </button>
-                            <div class="dropdown-box hide-dropdown filter-items">
-                                <!-- FILLTER ITEMS ARE GENERATED DYNAMICALLY BY TABLE COLUMN HEADER VALUES  -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <table class="table-overview user-management-table" id="table">
-                <thead>
-                    <tr>
-                        <th>S/N</th>
-                        <th>Profile</th>
-                        <th>Email</th>
-                        <th>Role</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="profile-cell">
-                            <img src="/images/account-img.png" alt="profile-image" class="profile-image">
-                            <div class="profile-details">
-                                <p class="profile-name">Chioma Okoli</p>
-
-                            </div>
-                        </td>
-                        <td>
-                            chiomaokoli@gmail.com
-                        </td>
-                        <td>Course Management</td>
-                        <td>
-                            <span data-status="active" class="status">active</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td class="profile-cell">
-                            <img src="/images/account-img.png" alt="profile-image" class="profile-image">
-                            <div class="profile-details">
-                                <p class="profile-name">Chioma Okoli</p>
-
-                            </div>
-                        </td>
-                        <td>
-                            chiomaokoli@gmail.com
-                        </td>
-                        <td>Course Management</td>
-                        <td>
-                            <span data-status="pending" class="status">pending</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td class="profile-cell">
-                            <img src="/images/account-img.png" alt="profile-image" class="profile-image">
-                            <div class="profile-details">
-                                <p class="profile-name">Chioma Okoli</p>
-
-                            </div>
-                        </td>
-                        <td>
-                            chiomaokoli@gmail.com
-                        </td>
-                        <td>Course Management</td>
-                        <td>
-                            <span data-status="inactive" class="status">inactive</span>
-                        </td>
-                    </tr>
-
-
-                </tbody>
-            </table>
-            <footer class="pagination-wrapper">
-                <button class="pagination-btn-prev">
-                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12.5 2C18.01 2 22.5 6.49 22.5 12C22.5 17.51 18.01 22 12.5 22C6.99 22 2.5 17.51 2.5 12C2.5 6.49 6.99 2 12.5 2ZM9.71 12.53L13.24 16.06C13.39 16.21 13.58 16.28 13.77 16.28C13.96 16.28 14.15 16.21 14.3 16.06C14.59 15.77 14.59 15.29 14.3 15L11.3 12L14.3 9C14.59 8.71 14.59 8.23 14.3 7.94C14.01 7.65 13.53 7.65 13.24 7.94L9.71 11.47C9.41 11.76 9.41 12.24 9.71 12.53Z"
-                            fill="#0B8342" />
-                    </svg>
-                </button>
-                <div class="pagination-button-container">
-                    <!-- PAGINATION LIST ARE CREATED DYNAMICALLY IN JS  -->
-                </div>
-                <button class="pagination-btn-next">
-                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12.5 2C6.99 2 2.5 6.49 2.5 12C2.5 17.51 6.99 22 12.5 22C18.01 22 22.5 17.51 22.5 12C22.5 6.49 18.01 2 12.5 2ZM15.29 12.53L11.76 16.06C11.61 16.21 11.42 16.28 11.23 16.28C11.04 16.28 10.85 16.21 10.7 16.06C10.41 15.77 10.41 15.29 10.7 15L13.7 12L10.7 9C10.41 8.71 10.41 8.23 10.7 7.94C10.99 7.65 11.47 7.65 11.76 7.94L15.29 11.47C15.59 11.76 15.59 12.24 15.29 12.53Z"
-                            fill="#0B8342" />
-                    </svg>
-
-                </button>
-            </footer>
-        </div>
-    </main>
-    <div class="user-actions-container hide-element">
-        <div class="wrapper">
-            <form action="" class="upload-form">
-                <div class="user-image">
-                    <img src="/images/account-img.png" alt="user image">
-                    <a href="" class="edit-image">Click to Edit</a>
-                </div>
-                <div class="split-form-group">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input id="name" type="text" placeholder="Enter Staff Name">
+                        <ul class="option-list dropdown-box hide-dropdown" role=" option">
+                            <li class="option-list-item">Blog</li>
+                            <li class="option-list-item">Event</li>
+                        </ul>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" name="email" placeholder="Enter Email Address" id="email">
+                        <label for="eventTitle">Content</label>
+                        <textarea name="" id="" rows="7"></textarea>
                     </div>
-                </div>
-                <div class="split-form-group">
-                    <div class="form-group">
-                        <label for="role">Role</label>
-                        <input id="role" type="text" name="role" placeholder="Enter staff role">
-                    </div>
-                    <div>
-                        <a href="" class="link-button isolate-button-staff-form  alt">Save</a>
-                    </div>
-                </div>
-
-            </form>
-            <div class="buttons-space-between">
-                <a href="" class="link-button big-padding">Remove</a>
-                <a href="" class="link-button big-padding">Suspend</a>
+                    <button type="submit" hidden id="submit-form"></button>
+                    <input type="file" accept="image/*" src="" name="" id="imageInput" hidden>
+                </form>
             </div>
         </div>
-    </div>
+        <div class=" form-actions">
+            <button class="button" id="submit-form-btn" onclick="submitForm()">Publish</button>
+            <a href="" class="link-button alt">Save as Draft</a>
+        </div>
+    </main>
+
 </body>
 
 </html>

@@ -84,6 +84,8 @@
 .breadcrumb-menu {
     width: fit-content;
     display: flex;
+    text-decoration: none;
+    color: inherit;
     align-items: center;
     gap: 12px;
     font-size: 1.25rem;

@@ -47,7 +47,7 @@ const optionListContainer = document.querySelectorAll(".custom-option-list")
 optionListContainer.forEach((element) => {
     element.addEventListener("click", (e) => {
         if (e.target.classList.contains("option-list-item")) {
-            const optionValueInput = document.getElementById("option-value")
+            const optionValueInput = document.querySelector("[data-dropdown-toggle-btn]")
             if (optionValueInput) {
                 optionValueInput.value = e.target.textContent
             }
@@ -148,17 +148,22 @@ const imageFile = document.getElementById("imageInput")
 const form = document.getElementById("form")
 const deleteImageFile = document.querySelector("[data-delete-uploaded-item]")
 
-document.querySelector(".placeholder-container").addEventListener("click", () => {
+const placeholderContainer = document.querySelector(".placeholder-container")
+placeholderContainer?.addEventListener("click", () => {
     document.getElementById("imageInput").click()
 })
 
 let displayImageName = document.querySelector(".uploaded-files-container p")
-deleteImageFile.addEventListener("click", function (e) {
-    imageFile.value = ""
+deleteImageFile?.addEventListener("click", function (e) {
+    if (imageFile.value) {
+        imageFile.value = ""
+    } else {
+        return
+    }
     displayImageName.textContent = "No file selected"
 })
 
-imageFile.addEventListener("change", function (e) {
+imageFile?.addEventListener("change", function (e) {
     const filename = this.files[0]?.name
     document.querySelector(".uploaded-files-container p").textContent = filename
 })
@@ -174,3 +179,33 @@ function handleDrop(event) {
 function allowDrop(event) {
     event.preventDefault() // Necessary to allow the drop
 }
+const staffActionContainer = document.querySelector(".user-actions-container")
+const btnToToggleStaffAction = document.querySelectorAll(".user-management-table tbody tr")
+btnToToggleStaffAction?.forEach((row) => {
+    row.addEventListener("click", (e) => {
+        staffActionContainer.classList.remove("hide-element")
+    })
+})
+
+staffActionContainer?.addEventListener("click", (e) => {
+    if (e.target.classList.contains("user-actions-container")) {
+        staffActionContainer.classList.add("hide-element")
+    }
+})
+
+const popoverContainer = document.querySelector(".popover-container")
+const btnToTogglePopover = document.querySelectorAll("[data-delete-course]")
+btnToTogglePopover?.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        popoverContainer.classList.remove("hide-element")
+    })
+})
+popoverContainer?.addEventListener("click", (e) => {
+    if (
+        e.target.classList.contains("popover-container") ||
+        e.target.classList.contains("close-popover") ||
+        e.target.classList.contains("close-action")
+    ) {
+        popoverContainer.classList.add("hide-element")
+    }
+})

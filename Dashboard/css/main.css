@@ -12,6 +12,7 @@ body {
   font-family: "Poppins", sans-serif;
   display: grid;
   grid-template-columns: 240px 1fr;
+  position: relative;
 }
 
 button,
@@ -21,8 +22,9 @@ textarea {
   font-family: inherit;
 }
 
-.hide-dropdown {
-  display: none;
+.hide-dropdown,
+.hide-element {
+  display: none !important;
 }
 
 .navigation-content {
@@ -51,6 +53,9 @@ textarea {
   border-radius: 8px;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   font-size: 0.85rem;
+}
+.link-button.big-padding {
+  padding: 1rem 2rem;
 }
 .link-button:hover {
   background-color: #005925;
@@ -109,6 +114,92 @@ svg {
   background-color: #005925;
   color: white;
   stroke: white;
+}
+
+.buttons-space-between {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.user-actions-container,
+.popover-container {
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  height: 100dvh;
+  background-color: rgba(219, 219, 219, 0.349);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-actions-container .wrapper,
+.user-actions-container .popover-wrapper,
+.popover-container .wrapper,
+.popover-container .popover-wrapper {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+}
+.user-actions-container .user-image,
+.popover-container .user-image {
+  display: grid;
+  gap: 0.6rem;
+}
+.user-actions-container img,
+.popover-container img {
+  width: 70px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.user-actions-container .edit-image,
+.popover-container .edit-image {
+  text-decoration: none;
+  color: #DCDDDD;
+}
+.user-actions-container div:has(> .isolate-button-staff-form),
+.popover-container div:has(> .isolate-button-staff-form) {
+  display: flex;
+  height: 75%;
+  align-self: flex-end;
+  align-items: center;
+}
+.user-actions-container div:has(> .isolate-button-staff-form) .link-button,
+.popover-container div:has(> .isolate-button-staff-form) .link-button {
+  margin-inline: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  border-width: 2px;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-dropdown-actions .popover-wrapper {
+  position: relative;
+}
+.table-dropdown-actions .close-icon {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  display: grid;
+  place-content: center;
+  width: 30px;
+  aspect-ratio: 1;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.popover-action-buttons {
+  margin-top: 1rem;
+  width: 180px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.popover-action-buttons .button,
+.popover-action-buttons .link-button {
+  padding-inline: 1rem;
 }
 
 .logo-image-container {
@@ -185,6 +276,8 @@ svg {
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
+  text-decoration: none;
+  color: inherit;
   align-items: center;
   gap: 12px;
   font-size: 1.25rem;
@@ -293,6 +386,9 @@ svg {
   color: #4A4C4C;
   font-size: 14px;
   font-weight: 500;
+}
+.table-overview tbody tr:hover {
+  cursor: pointer;
 }
 .table-overview tbody tr:not(:last-child) {
   border-bottom: 1px solid #DCDDDD;
@@ -425,9 +521,17 @@ svg {
   padding: 1em;
   transition: background-color 0.1s ease;
 }
+.dropdown-container .dropdown-item a {
+  all: unset;
+  display: block;
+}
 .dropdown-container .dropdown-item:hover {
   cursor: pointer;
   background-color: #DCDDDD;
+}
+
+.user-management-table tbody tr:hover {
+  cursor: pointer;
 }
 
 .upload-title {
@@ -446,6 +550,17 @@ svg {
 .form-group {
   display: grid;
   gap: 0.6em;
+}
+.form-group label {
+  color: #5D5F5F;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.form-group input::-moz-placeholder {
+  font-size: 0.8rem;
+}
+.form-group input::placeholder {
+  font-size: 0.8rem;
 }
 .form-group input,
 .form-group textarea,
@@ -538,6 +653,16 @@ svg {
   padding: 0.875rem;
   justify-content: center;
   width: 200px;
+}
+
+.split-form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.split-form-group > * {
+  flex: 1;
+  min-width: 200px;
 }
 
 .custom-option-list {
