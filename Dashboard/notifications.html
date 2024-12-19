@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staff Management</title>
+    <title>Notifications</title>
     <link rel="stylesheet" href="/css/main.css">
     <script defer src="/js/main.js"></script>
     <style>
@@ -220,48 +220,24 @@
                         <div class="svg-wrapper">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 4.29333V6.51334" stroke="#FDFCFC" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" />
                                 <path
-                                    d="M6.10671 7.24665C6.04004 7.23998 5.96004 7.23998 5.88671 7.24665C4.30004 7.19331 3.04004 5.89331 3.04004 4.29331C3.04004 2.65998 4.36004 1.33331 6.00004 1.33331C7.63337 1.33331 8.96004 2.65998 8.96004 4.29331C8.95337 5.89331 7.69337 7.19331 6.10671 7.24665Z"
-                                    stroke="#009D17" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
+                                    d="M8.01327 1.33331C5.55993 1.33331 3.57327 3.31998 3.57327 5.77331V7.17331C3.57327 7.62665 3.3866 8.30665 3.15327 8.69331L2.3066 10.1066C1.7866 10.98 2.1466 11.9533 3.1066 12.2733C6.29327 13.3333 9.73993 13.3333 12.9266 12.2733C13.8266 11.9733 14.2133 10.92 13.7266 10.1066L12.8799 8.69331C12.6466 8.30665 12.4599 7.61998 12.4599 7.17331V5.77331C12.4533 3.33331 10.4533 1.33331 8.01327 1.33331Z"
+                                    fill="#319856" />
                                 <path
-                                    d="M10.9402 2.66669C12.2335 2.66669 13.2735 3.71335 13.2735 5.00002C13.2735 6.26002 12.2735 7.28669 11.0268 7.33335C10.9735 7.32669 10.9135 7.32669 10.8535 7.33335"
-                                    stroke="#009D17" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M2.77348 9.70669C1.16014 10.7867 1.16014 12.5467 2.77348 13.62C4.60681 14.8467 7.61348 14.8467 9.44681 13.62C11.0601 12.54 11.0601 10.78 9.44681 9.70669C7.62014 8.48669 4.61348 8.48669 2.77348 9.70669Z"
-                                    stroke="#009D17" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M12.2266 13.3333C12.7066 13.2333 13.1599 13.04 13.5332 12.7533C14.5732 11.9733 14.5732 10.6866 13.5332 9.90665C13.1666 9.62665 12.7199 9.43998 12.2466 9.33331"
-                                    stroke="#009D17" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
+                                    d="M10.2203 12.5467C10.2203 13.7667 9.22027 14.7667 8.00027 14.7667C7.39361 14.7667 6.83361 14.5134 6.43361 14.1134C6.03361 13.7134 5.78027 13.1534 5.78027 12.5467"
+                                    fill="#319856" />
                             </svg>
 
 
                         </div>
-                        <p>Staff Management</p>
+                        <p>Notifications</p>
                     </div>
-                    <button class="button alt" data-open-popover>Invite</button>
-
+                    <button class="button alt" data-open-popover>New</button>
                 </div>
-                <div class="lower-header-section">
-                    <a href="" class="link-button">
-                        <span>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.6875 11.1462L12.375 14.8338L16.0626 11.1462" stroke="white"
-                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M12.375 14.8337V5.00024" stroke="white" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M5 17.292C9.7815 18.8899 14.9686 18.8899 19.7501 17.292" stroke="white"
-                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-
-                        </span>
-                        <span>Download CSV</span>
-                    </a>
-                    <div class="table-actions">
+                <div class="lower-header-section space-right">
+                    <div class="table-actions ">
                         <form action="" class="table-search-input">
                             <button>
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
@@ -318,211 +294,53 @@
                     </div>
                 </div>
             </header>
-            <table class="table-overview user-management-table" id="table">
-                <thead>
-                    <tr>
-                        <th>S/N</th>
-                        <th>Profile</th>
-                        <th>Email</th>
-                        <th>Role</th>
-                        <th>Status</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="profile-cell">
-                            <img src="/images/account-img.png" alt="profile-image" class="profile-image">
-                            <div class="profile-details">
-                                <p class="profile-name">Chioma Okoli</p>
-
-                            </div>
-                        </td>
-                        <td>
-                            chiomaokoli@gmail.com
-                        </td>
-                        <td>Course Management</td>
-                        <td>
-                            <span data-status="active" class="status">active</span>
-                        </td>
-                        <td>
-                            <div class="dropdown-container">
-                                <button class="action-btn" data-dropdown-toggle-btn>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-                                            stroke="#4A4C4C" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M15.9965 12H16.0054" stroke="#4A4C4C" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M11.9955 12H12.0045" stroke="#4A4C4C" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M7.99451 12H8.00349" stroke="#4A4C4C" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-
-                                </button>
-
-                                <div class="dropdown-box hide-dropdown anchor-at-edge ">
-
-                                    <p role="button" data-open-popover class="dropdown-item">Edit Staff</p>
-                                    <p class="dropdown-item"><a href="">Suspend Staff</a></p>
-                                    <p class="dropdown-item"><a href="">Remove Staff</a></p>
-
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td class="profile-cell">
-                            <img src="/images/account-img.png" alt="profile-image" class="profile-image">
-                            <div class="profile-details">
-                                <p class="profile-name">Chioma Okoli</p>
-
-                            </div>
-                        </td>
-                        <td>
-                            chiomaokoli@gmail.com
-                        </td>
-                        <td>Course Management</td>
-                        <td>
-                            <span data-status="pending" class="status">pending</span>
-                        </td>
-                        <td>
-                            <div class="dropdown-container">
-                                <button class="action-btn" data-dropdown-toggle-btn>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-                                            stroke="#4A4C4C" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M15.9965 12H16.0054" stroke="#4A4C4C" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M11.9955 12H12.0045" stroke="#4A4C4C" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M7.99451 12H8.00349" stroke="#4A4C4C" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-
-                                </button>
-
-                                <div class="dropdown-box hide-dropdown anchor-at-edge ">
-
-                                    <p role="button" data-open-popover class="dropdown-item">Edit Staff</p>
-                                    <p class="dropdown-item"><a href="">Suspend Staff</a></p>
-                                    <p class="dropdown-item"><a href="">Remove Staff</a></p>
-
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td class="profile-cell">
-                            <img src="/images/account-img.png" alt="profile-image" class="profile-image">
-                            <div class="profile-details">
-                                <p class="profile-name">Chioma Okoli</p>
-
-                            </div>
-                        </td>
-                        <td>
-                            chiomaokoli@gmail.com
-                        </td>
-                        <td>Course Management</td>
-                        <td>
-                            <span data-status="inactive" class="status">inactive</span>
-                        </td>
-                        <td>
-                            <div class="dropdown-container">
-                                <button class="action-btn" data-dropdown-toggle-btn>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-                                            stroke="#4A4C4C" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M15.9965 12H16.0054" stroke="#4A4C4C" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M11.9955 12H12.0045" stroke="#4A4C4C" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M7.99451 12H8.00349" stroke="#4A4C4C" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-
-                                </button>
-
-                                <div class="dropdown-box hide-dropdown anchor-at-edge ">
-
-                                    <p role="button" data-open-popover class="dropdown-item">Edit Staff</p>
-                                    <p class="dropdown-item"><a href="">Suspend Staff</a></p>
-                                    <p class="dropdown-item"><a href="">Remove Staff</a></p>
-
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-
-
-                </tbody>
-            </table>
-            <footer class="pagination-wrapper">
-                <button class="pagination-btn-prev">
-                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12.5 2C18.01 2 22.5 6.49 22.5 12C22.5 17.51 18.01 22 12.5 22C6.99 22 2.5 17.51 2.5 12C2.5 6.49 6.99 2 12.5 2ZM9.71 12.53L13.24 16.06C13.39 16.21 13.58 16.28 13.77 16.28C13.96 16.28 14.15 16.21 14.3 16.06C14.59 15.77 14.59 15.29 14.3 15L11.3 12L14.3 9C14.59 8.71 14.59 8.23 14.3 7.94C14.01 7.65 13.53 7.65 13.24 7.94L9.71 11.47C9.41 11.76 9.41 12.24 9.71 12.53Z"
-                            fill="#0B8342" />
-                    </svg>
-                </button>
-                <div class="pagination-button-container">
-                    <!-- PAGINATION LIST ARE CREATED DYNAMICALLY IN JS  -->
+            <section class="notifications-section-container">
+                <div class="notification-card">
+                    <div class="notification-header">
+                        <p class="title">Notification</p>
+                        <p class="date">22nd Feb, 2024</p>
+                    </div>
+                    <p class="notification-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi tempora
+                        repudiandae, dolore explicabo quasi blanditiis. Accusamus magni nulla necessitatibus odio!</p>
                 </div>
-                <button class="pagination-btn-next">
-                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12.5 2C6.99 2 2.5 6.49 2.5 12C2.5 17.51 6.99 22 12.5 22C18.01 22 22.5 17.51 22.5 12C22.5 6.49 18.01 2 12.5 2ZM15.29 12.53L11.76 16.06C11.61 16.21 11.42 16.28 11.23 16.28C11.04 16.28 10.85 16.21 10.7 16.06C10.41 15.77 10.41 15.29 10.7 15L13.7 12L10.7 9C10.41 8.71 10.41 8.23 10.7 7.94C10.99 7.65 11.47 7.65 11.76 7.94L15.29 11.47C15.59 11.76 15.59 12.24 15.29 12.53Z"
-                            fill="#0B8342" />
-                    </svg>
-
-                </button>
-            </footer>
+                <div class="notification-card">
+                    <div class="notification-header">
+                        <p class="title">Notification</p>
+                        <p class="date">22nd Feb, 2024</p>
+                    </div>
+                    <p class="notification-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi tempora
+                        repudiandae, dolore explicabo quasi blanditiis. Accusamus magni nulla necessitatibus odio!</p>
+                </div>
+                <div class="notification-card">
+                    <div class="notification-header">
+                        <p class="title">Notification</p>
+                        <p class="date">22nd Feb, 2024</p>
+                    </div>
+                    <p class="notification-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi tempora
+                        repudiandae, dolore explicabo quasi blanditiis. Accusamus magni nulla necessitatibus odio!</p>
+                </div>
+            </section>
         </div>
     </main>
+
     <div class="user-actions-container hide-element">
         <div class="wrapper">
             <form action="" class="upload-form">
-                <div class="user-image">
-                    <img src="/images/account-img.png" alt="user image">
-                    <a href="" class="edit-image">Click to Edit</a>
-                </div>
-                <div class="split-form-group">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input id="name" type="text" placeholder="Enter Staff Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" name="email" placeholder="Enter Email Address" id="email">
-                    </div>
-                </div>
-                <div class="split-form-group">
-                    <div class="form-group">
-                        <label for="role">Role</label>
-                        <input id="role" type="text" name="role" placeholder="Enter staff role">
-                    </div>
-                    <div>
-                        <a href="" class="link-button isolate-button-staff-form  alt">Save</a>
-                    </div>
-                </div>
 
+                <div class="form-group">
+                    <label for="notification-title">Notification Title</label>
+                    <input id="notification-title" type="text" name="notification-title"
+                        placeholder="Enter the title of the notification">
+                </div>
+                <div class="form-group">
+                    <label for="notification-content">Content</label>
+                    <textarea name="notification-content" id="notification-content" rows="5"></textarea>
+                </div>
             </form>
-            <!-- <div class="buttons-space-between">
-                <a href="" class="link-button big-padding">Remove</a>
-                <a href="" class="link-button big-padding">Suspend</a>
-            </div> -->
+            <div class="buttons-space-between">
+                <a href="" class="link-button big-padding">Publish</a>
+                <a href="" class="link-button big-padding">Draft</a>
+            </div>
         </div>
     </div>
 </body>

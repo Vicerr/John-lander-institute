@@ -42,6 +42,10 @@ textarea {
   padding: 1.2rem 1rem;
 }
 
+.top-2 {
+  margin-top: 2rem;
+}
+
 .link-button {
   display: inline-flex;
   gap: 4px;
@@ -141,6 +145,8 @@ svg {
   background-color: white;
   padding: 2rem;
   border-radius: 8px;
+  width: min(85%, 500px);
+  text-align: center;
 }
 .user-actions-container .user-image,
 .popover-container .user-image {
@@ -200,6 +206,76 @@ svg {
 .popover-action-buttons .button,
 .popover-action-buttons .link-button {
   padding-inline: 1rem;
+}
+
+.two-column-list-layout {
+  margin-top: 1.5rem;
+}
+.two-column-list-layout ul {
+  list-style: none;
+}
+.two-column-list-layout .divider {
+  display: flex;
+  flex-wrap: wrap;
+}
+.two-column-list-layout .divider:not(:first-child) {
+  margin-top: 1rem;
+}
+.two-column-list-layout .divider > * {
+  flex: 1;
+  min-width: 200px;
+}
+.two-column-list-layout div:has(> .title) {
+  display: grid;
+  gap: 0.1em;
+}
+.two-column-list-layout .title {
+  color: #5D5F5F;
+}
+.two-column-list-layout .value {
+  color: #373939;
+  font-size: 0.875rem;
+}
+.two-column-list-layout .value.border {
+  border-radius: 10px;
+  border: 1px solid #0b8342;
+  width: 140px;
+  height: 70px;
+  display: grid;
+  place-content: center;
+}
+
+.form-upload.internship {
+  margin-top: 3rem;
+}
+.form-upload.internship button {
+  display: flex;
+  margin-top: 1rem;
+  margin-left: auto;
+}
+
+.student-image {
+  margin-top: 1rem;
+  width: 120px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.courses-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+.courses-list li {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #F3F4F4;
+  font-size: 0.75rem;
+  color: #4A4C4C;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+}
+.courses-list li:not(:last-child) {
+  margin-right: 0.6rem;
 }
 
 .logo-image-container {
@@ -306,6 +382,10 @@ svg {
   align-items: center;
 }
 
+.lower-header-section.space-right {
+  justify-content: flex-end;
+}
+
 .section-table-title {
   display: flex;
   align-items: center;
@@ -386,9 +466,6 @@ svg {
   color: #4A4C4C;
   font-size: 14px;
   font-weight: 500;
-}
-.table-overview tbody tr:hover {
-  cursor: pointer;
 }
 .table-overview tbody tr:not(:last-child) {
   border-bottom: 1px solid #DCDDDD;
@@ -528,10 +605,6 @@ svg {
 .dropdown-container .dropdown-item:hover {
   cursor: pointer;
   background-color: #DCDDDD;
-}
-
-.user-management-table tbody tr:hover {
-  cursor: pointer;
 }
 
 .upload-title {
@@ -699,4 +772,42 @@ svg {
   place-content: center;
   border: none;
   aspect-ratio: 1;
+}
+
+.notifications-section-container {
+  margin-top: 1rem;
+  display: grid;
+}
+.notifications-section-container.resources .title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.notification-card {
+  padding-block: 1rem;
+  display: grid;
+  text-decoration: none;
+  gap: 0.6rem;
+}
+.notification-card:not(:last-child) {
+  border-bottom: 1px solid #DCDDDD;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+}
+.notification-header .title {
+  color: #373939;
+  font-weight: 700;
+}
+.notification-header .date {
+  color: #373939;
+  font-weight: 500;
+}
+
+.notification-body {
+  color: #4A4C4C;
+  font-size: 0.85rem;
 }/*# sourceMappingURL=main.css.map */

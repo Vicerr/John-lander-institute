@@ -180,7 +180,7 @@ function allowDrop(event) {
     event.preventDefault() // Necessary to allow the drop
 }
 const staffActionContainer = document.querySelector(".user-actions-container")
-const btnToToggleStaffAction = document.querySelectorAll(".user-management-table tbody tr")
+const btnToToggleStaffAction = document.querySelectorAll("[data-open-popover]")
 btnToToggleStaffAction?.forEach((row) => {
     row.addEventListener("click", (e) => {
         staffActionContainer.classList.remove("hide-element")
@@ -208,4 +208,30 @@ popoverContainer?.addEventListener("click", (e) => {
     ) {
         popoverContainer.classList.add("hide-element")
     }
+})
+
+// ADD ACTIVE CLASS ON LINK
+// create an array of manual comparison between pages i wan't the active class to be on
+const activeLinks = {
+    "/courses": ["add-course"],
+    "/management": ["add-student", "view-student"],
+    "/media": ["events", "upload-content"],
+    "/messages": ["internship-details"],
+    "/library": ["add-library"],
+    "/resources": ["add-resource"],
+}
+
+const navLinks = document.querySelectorAll(".nav-link > a")
+
+navLinks.forEach((link) => {
+    const currentPage = window.location.pathname.replace(".html", "") //removes ".html"
+    const linkHref = link?.getAttribute("href")?.replace(".html", "") //removes ".html"
+
+    if (
+        currentPage === linkHref || // Exact match
+        activeLinks[linkHref]?.some((relatedPage) => currentPage === `/${relatedPage}`) // Match related pages
+    ) {
+        link.classList.add("active")
+    }
+    // console.log(`Checking link: ${linkHref} against current page: ${currentPage}`)
 })

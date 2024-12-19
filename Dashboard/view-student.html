@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Course</title>
+    <title>Internship Details</title>
     <link rel="stylesheet" href="/css/main.css">
     <script defer src="/js/main.js"></script>
     <style>
@@ -14,7 +14,6 @@
 
 <body>
     <nav class="navigation-content">
-
         <div class="logo-image-container">
             <img src="/images/john lander institute logo2 3.png" alt="image">
         </div>
@@ -215,7 +214,7 @@
     </nav>
     <main class="main-content">
         <div class="breadcrumb-menu">
-            <a href="/courses.html" class="back-btn">
+            <a href="/management.html" class="back-btn">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.79089 5.48145L3.27271 10.9996L8.79089 16.5178" stroke="#373939" stroke-width="1.36364"
                         stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -225,107 +224,162 @@
 
             </a>
 
-            <p>Add Course</p>
+            <p>View User</p>
         </div>
         <div class="wrapper">
-            <div class="upload-content">
-                <h2 class="upload-title">Course Details</h2>
-                <form action="" id="form" class="upload-form">
+            <header class="content-table-header">
+                <div class="upper-header-section align-center">
+                    <h2 class="upload-title">Student Details</h2>
 
-                    <!-- COURSE TITLE AND PRICE FORM INPUT -->
+                    <a href="/add-student.html" class="link-button alt">
+                        <span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.49994 20.5004C4.32994 21.3304 5.66994 21.3304 6.49994 20.5004L19.4999 7.50043C20.3299 6.67043 20.3299 5.33043 19.4999 4.50043C18.6699 3.67043 17.3299 3.67043 16.4999 4.50043L3.49994 17.5004C2.66994 18.3304 2.66994 19.6704 3.49994 20.5004Z"
+                                    stroke="#52AD6E" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M18.0098 8.99023L15.0098 5.99023" stroke="#52AD6E" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
 
-                    <div class="split-form-group">
-                        <div class="form-group">
-                            <label for="course-title">Course Title</label>
-                            <input id="course-title" type="text" placeholder="Enter Title of Course">
-                        </div>
-                        <div class="form-group">
-                            <label for="course-price">Price</label>
-                            <input type="text" placeholder="Enter Price of Course" id="course-price">
-                        </div>
+                        </span>
+                        <span>Edit</span>
+                    </a>
+                </div>
+
+            </header>
+
+            <img class="student-image" src="/images/account-img.png" alt="profile-image">
+            <section class="two-column-list-layout">
+                <div class="divider">
+                    <div>
+                        <p class="title">Surname</p>
+                        <p class="value">John</p>
                     </div>
 
-                    <!-- COURSE DURATION AND NUMBER OF COURSES FORM INPUT  -->
-
-                    <div class="split-form-group">
-                        <div class="form-group">
-                            <label for="course-duration">Course Duration</label>
-                            <input id="course-duration" name="course-duration" type="text">
-                        </div>
-                        <div class="form-group">
-                            <label for="module-count">Number of Modules</label>
-                            <input type="number" name="module-count" id="module-count"
-                                placeholder="Enter Number of Module Here">
-                        </div>
+                    <div>
+                        <p class="title">Other Names</p>
+                        <p class="value">Doe Chris</p>
                     </div>
 
-                    <!-- ABOUT COURSE AND WHAT TO LEARN FORM INPUT  -->
-
-                    <div class="form-group">
-                        <label for="course-info">About Course</label>
-                        <textarea name="course-info" id="course-info" rows="7"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="what-to-learn">What to Learn</label>
-                        <input type="text" id="what-to-learn" name="what-to-learn">
-                    </div>
-                    <div class="form-group">
-                        <label for="course-module">Course Module</label>
-                        <input type="text" id="course-module" name="course-module">
+                </div>
+                <div class="divider">
+                    <div>
+                        <p class="title">Email Address</p>
+                        <p class="value">johndow@gmail.com</p>
                     </div>
 
-
-                    <!-- UPLOAD COUSE IMAGE INPUT  -->
-
-                    <div class="form-group image-with-placeholder">
-                        <label for="eventTitle">Upload Image</label>
-                        <div class="placeholder-container">
-                            <div class="placeholder">
-                                <svg width="73" height="72" viewBox="0 0 73 72" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M63.41 3H54.59C50.78 3 48.5 5.28 48.5 9.09V17.91C48.5 21.72 50.78 24 54.59 24H63.41C67.22 24 69.5 21.72 69.5 17.91V9.09C69.5 5.28 67.22 3 63.41 3ZM64.07 12.93C63.71 13.29 63.23 13.47 62.75 13.47C62.27 13.47 61.79 13.29 61.43 12.93L60.89 12.39V19.11C60.89 20.16 60.05 21 59 21C57.95 21 57.11 20.16 57.11 19.11V12.39L56.57 12.93C55.85 13.65 54.65 13.65 53.93 12.93C53.21 12.21 53.21 11.01 53.93 10.29L57.68 6.54C57.83 6.39 58.04 6.27 58.25 6.18C58.31 6.15 58.37 6.15 58.43 6.12C58.58 6.06 58.73 6.03 58.91 6.03C58.97 6.03 59.03 6.03 59.09 6.03C59.3 6.03 59.48 6.06 59.69 6.15C59.72 6.15 59.72 6.15 59.75 6.15C59.96 6.24 60.14 6.36 60.29 6.51C60.32 6.54 60.32 6.54 60.35 6.54L64.1 10.29C64.82 11.01 64.82 12.21 64.07 12.93Z"
-                                        fill="#C5C7C7" />
-                                    <path
-                                        d="M27.5004 31.1404C31.4437 31.1404 34.6404 27.9437 34.6404 24.0004C34.6404 20.057 31.4437 16.8604 27.5004 16.8604C23.557 16.8604 20.3604 20.057 20.3604 24.0004C20.3604 27.9437 23.557 31.1404 27.5004 31.1404Z"
-                                        fill="#C5C7C7" />
-                                    <path
-                                        d="M63.41 24H62V37.83L61.61 37.5C59.27 35.49 55.49 35.49 53.15 37.5L40.67 48.21C38.33 50.22 34.55 50.22 32.21 48.21L31.19 47.37C29.06 45.51 25.67 45.33 23.27 46.95L12.05 54.48C11.39 52.8 11 50.85 11 48.57V23.43C11 14.97 15.47 10.5 23.93 10.5H48.5V9.09C48.5 7.89 48.71 6.87 49.19 6H23.93C13.01 6 6.5 12.51 6.5 23.43V48.57C6.5 51.84 7.07 54.69 8.18 57.09C10.76 62.79 16.28 66 23.93 66H49.07C59.99 66 66.5 59.49 66.5 48.57V23.31C65.63 23.79 64.61 24 63.41 24Z"
-                                        fill="#C5C7C7" />
-                                </svg>
-
-                                <p>Drag image or upload from files</p>
-                            </div>
-
-                            <div ondrop="handleDrop(event)" ondragover="allowDrop(event)"
-                                class="image-input high-input">
-                            </div>
-                        </div>
-
-                        <div class="uploaded-files-container">
-                            <p>No file selected</p>
-                            <button type="button" data-delete-uploaded-item>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#5f6368">
-                                    <path
-                                        d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z" />
-                                </svg>
-                            </button>
-                        </div>
+                    <div>
+                        <p class="title">Phone Number</p>
+                        <p class="value">+234 9004 723 1129</p>
                     </div>
 
 
-                    <button type="submit" hidden id="submit-form"></button>
-                    <input type="file" accept="image/*" src="" name="" id="imageInput" hidden>
-                </form>
-            </div>
+                </div>
+                <div class="divider">
+                    <div>
+                        <p class="title">Sex</p>
+                        <p class="value">Male</p>
+                    </div>
+                    <div>
+                        <p class="title">Date of Birth</p>
+                        <p class="value">22nd August 2000</p>
+                    </div>
+
+                </div>
+                <div class="divider">
+                    <div>
+                        <p class="title">Religion</p>
+                        <p class="value">Christianity</p>
+                    </div>
+
+                    <div>
+                        <p class="title">Home</p>
+                        <p class="value">02 Avenue, Trans Amadi Estate, Ph, Rivers State</p>
+                    </div>
+
+                </div>
+                <div class="divider">
+                    <div>
+                        <p class="title">State</p>
+                        <p class="value">Rivers State</p>
+                    </div>
+
+                    <div>
+                        <p class="title">LGA</p>
+                        <p class="value">Ikwerre</p>
+                    </div>
+
+                </div>
+                <div class="divider">
+                    <div>
+                        <p class="title">Admission Number</p>
+                        <p class="value">JUFW3-eEIA</p>
+                    </div>
+
+                    <div>
+                        <p class="title">Password</p>
+                        <p class="value">**********</p>
+                    </div>
+
+                </div>
+            </section>
+
         </div>
+        <div class="wrapper top-2">
+            <header class="content-table-header">
+                <div class="upper-header-section align-center">
+                    <h2 class="upload-title">Enrolled Courses</h2>
 
-        <div class=" form-actions">
-            <button class="button" id="submit-form-btn" onclick="submitForm()">Save</button>
-            <a href="" class="link-button alt">Save as Draft</a>
+                    <a href="/add-student.html" class="link-button alt">
+                        <span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.49994 20.5004C4.32994 21.3304 5.66994 21.3304 6.49994 20.5004L19.4999 7.50043C20.3299 6.67043 20.3299 5.33043 19.4999 4.50043C18.6699 3.67043 17.3299 3.67043 16.4999 4.50043L3.49994 17.5004C2.66994 18.3304 2.66994 19.6704 3.49994 20.5004Z"
+                                    stroke="#52AD6E" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M18.0098 8.99023L15.0098 5.99023" stroke="#52AD6E" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </span>
+                        <span>Edit</span>
+                    </a>
+                </div>
+
+            </header>
+
+            <ul class="courses-list">
+                <li>Machine Learning</li>
+                <li>Machine Learning</li>
+                <li>Machine Learning</li>
+
+            </ul>
         </div>
     </main>
 
+    <div class="user-actions-container hide-element">
+        <div class="wrapper">
+            <form action="" class="upload-form">
+
+                <div class="form-group">
+                    <label for="notification-title">Notification Title</label>
+                    <input id="notification-title" type="text" name="notification-title"
+                        placeholder="Enter the title of the notification">
+                </div>
+                <div class="form-group">
+                    <label for="notification-content">Content</label>
+                    <textarea name="notification-content" id="notification-content" rows="5"></textarea>
+                </div>
+            </form>
+            <div class="buttons-space-between">
+                <a href="" class="link-button big-padding">Publish</a>
+                <a href="" class="link-button big-padding">Draft</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

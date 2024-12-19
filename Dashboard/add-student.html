@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Course</title>
+    <title>Create Student</title>
     <link rel="stylesheet" href="/css/main.css">
     <script defer src="/js/main.js"></script>
     <style>
@@ -14,7 +14,6 @@
 
 <body>
     <nav class="navigation-content">
-
         <div class="logo-image-container">
             <img src="/images/john lander institute logo2 3.png" alt="image">
         </div>
@@ -215,7 +214,7 @@
     </nav>
     <main class="main-content">
         <div class="breadcrumb-menu">
-            <a href="/courses.html" class="back-btn">
+            <a href="/management.html" class="back-btn">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.79089 5.48145L3.27271 10.9996L8.79089 16.5178" stroke="#373939" stroke-width="1.36364"
                         stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -225,98 +224,163 @@
 
             </a>
 
-            <p>Add Course</p>
+            <p>Add Student</p>
         </div>
         <div class="wrapper">
             <div class="upload-content">
-                <h2 class="upload-title">Course Details</h2>
+                <h2 class="upload-title">Upload Student Details</h2>
                 <form action="" id="form" class="upload-form">
+                    <div class="split-form-group">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input id="firstName" type="text" placeholder="John">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" placeholder="Doe" id="lastname">
+                        </div>
+                    </div>
+                    <div class="split-form-group">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input id="email" type="email" id="email" placeholder="johndoe12@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="number" placeholder="Doe" id="phone">
+                        </div>
+                    </div>
 
-                    <!-- COURSE TITLE AND PRICE FORM INPUT -->
+                    <!-- SEX AND MARITAL STATUS FORM INPUT -->
 
                     <div class="split-form-group">
                         <div class="form-group">
-                            <label for="course-title">Course Title</label>
-                            <input id="course-title" type="text" placeholder="Enter Title of Course">
+                            <label for="sex">Sex</label>
+                            <input id="sex" type="text" placeholder="Male/Female">
                         </div>
                         <div class="form-group">
-                            <label for="course-price">Price</label>
-                            <input type="text" placeholder="Enter Price of Course" id="course-price">
+                            <label for="marital-status">Marital Status</label>
+                            <input type="text" placeholder="single/married/divorced" id="marital-status">
                         </div>
                     </div>
 
-                    <!-- COURSE DURATION AND NUMBER OF COURSES FORM INPUT  -->
+                    <!-- DATE OF BIRTH AND RELIGION FORM INPUT  -->
 
                     <div class="split-form-group">
                         <div class="form-group">
-                            <label for="course-duration">Course Duration</label>
-                            <input id="course-duration" name="course-duration" type="text">
+                            <label for="dob">Date of Birth</label>
+                            <input id="dob" type="date">
                         </div>
                         <div class="form-group">
-                            <label for="module-count">Number of Modules</label>
-                            <input type="number" name="module-count" id="module-count"
-                                placeholder="Enter Number of Module Here">
+                            <label for="religion">Religion</label>
+                            <input type="text" placeholder="christian/muslim/otherwise" id="religion">
                         </div>
                     </div>
 
-                    <!-- ABOUT COURSE AND WHAT TO LEARN FORM INPUT  -->
+                    <!-- HOME TOWN AND NATIONALITY FORM INPUT  -->
 
-                    <div class="form-group">
-                        <label for="course-info">About Course</label>
-                        <textarea name="course-info" id="course-info" rows="7"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="what-to-learn">What to Learn</label>
-                        <input type="text" id="what-to-learn" name="what-to-learn">
-                    </div>
-                    <div class="form-group">
-                        <label for="course-module">Course Module</label>
-                        <input type="text" id="course-module" name="course-module">
+                    <div class="split-form-group">
+                        <div class="form-group">
+                            <label for="home">Home</label>
+                            <input id="home" type="text" placeholder="Home Town">
+                        </div>
+                        <div class="form-group">
+                            <label for="nationality">Nationality</label>
+                            <input type="text" placeholder="Nigerian or otherwise" id="nationality" name="nationality">
+                        </div>
                     </div>
 
 
-                    <!-- UPLOAD COUSE IMAGE INPUT  -->
+                    <!-- STATE AND LGA FORM INPUT  -->
 
-                    <div class="form-group image-with-placeholder">
-                        <label for="eventTitle">Upload Image</label>
-                        <div class="placeholder-container">
-                            <div class="placeholder">
-                                <svg width="73" height="72" viewBox="0 0 73 72" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M63.41 3H54.59C50.78 3 48.5 5.28 48.5 9.09V17.91C48.5 21.72 50.78 24 54.59 24H63.41C67.22 24 69.5 21.72 69.5 17.91V9.09C69.5 5.28 67.22 3 63.41 3ZM64.07 12.93C63.71 13.29 63.23 13.47 62.75 13.47C62.27 13.47 61.79 13.29 61.43 12.93L60.89 12.39V19.11C60.89 20.16 60.05 21 59 21C57.95 21 57.11 20.16 57.11 19.11V12.39L56.57 12.93C55.85 13.65 54.65 13.65 53.93 12.93C53.21 12.21 53.21 11.01 53.93 10.29L57.68 6.54C57.83 6.39 58.04 6.27 58.25 6.18C58.31 6.15 58.37 6.15 58.43 6.12C58.58 6.06 58.73 6.03 58.91 6.03C58.97 6.03 59.03 6.03 59.09 6.03C59.3 6.03 59.48 6.06 59.69 6.15C59.72 6.15 59.72 6.15 59.75 6.15C59.96 6.24 60.14 6.36 60.29 6.51C60.32 6.54 60.32 6.54 60.35 6.54L64.1 10.29C64.82 11.01 64.82 12.21 64.07 12.93Z"
-                                        fill="#C5C7C7" />
-                                    <path
-                                        d="M27.5004 31.1404C31.4437 31.1404 34.6404 27.9437 34.6404 24.0004C34.6404 20.057 31.4437 16.8604 27.5004 16.8604C23.557 16.8604 20.3604 20.057 20.3604 24.0004C20.3604 27.9437 23.557 31.1404 27.5004 31.1404Z"
-                                        fill="#C5C7C7" />
-                                    <path
-                                        d="M63.41 24H62V37.83L61.61 37.5C59.27 35.49 55.49 35.49 53.15 37.5L40.67 48.21C38.33 50.22 34.55 50.22 32.21 48.21L31.19 47.37C29.06 45.51 25.67 45.33 23.27 46.95L12.05 54.48C11.39 52.8 11 50.85 11 48.57V23.43C11 14.97 15.47 10.5 23.93 10.5H48.5V9.09C48.5 7.89 48.71 6.87 49.19 6H23.93C13.01 6 6.5 12.51 6.5 23.43V48.57C6.5 51.84 7.07 54.69 8.18 57.09C10.76 62.79 16.28 66 23.93 66H49.07C59.99 66 66.5 59.49 66.5 48.57V23.31C65.63 23.79 64.61 24 63.41 24Z"
-                                        fill="#C5C7C7" />
-                                </svg>
+                    <div class="split-form-group">
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input id="state" type="text" placeholder="Rivers State" name="state">
+                        </div>
+                        <div class="form-group">
+                            <label for="lga">Local Government Area (LGA)</label>
+                            <input type="text" placeholder="Ikwerre" id="lga" name="lga">
+                        </div>
+                    </div>
 
-                                <p>Drag image or upload from files</p>
+                    <!-- ADDRESS AND ADMISSION NUMBER FORM INPUT  -->
+
+                    <div class="split-form-group">
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input id="address" name="address" type="text"
+                                placeholder="No 2 address road, opposite market square close, rivers state.">
+                        </div>
+                        <div class="form-group">
+                            <label for="admin-no">Admission Number</label>
+                            <input name="admin-no" type="text" placeholder="4JS9-KSDJUH" id="admin-no">
+                        </div>
+                    </div>
+
+                    <div class="split-form-group">
+                        <div class="form-group">
+                            <label for="password">Create User Password</label>
+                            <input id="password" name="password" type="password" placeholder="**********">
+                        </div>
+                        <!-- <div class="form-group dropdown-container custom-option-list ">
+                            <label for="courses">Enrolled Courses</label>
+                            <div>
+                                <input data-dropdown-toggle-btn id="courses" name="courses" type="text" value=""
+                                    readonly placeholder="select">
+                                <span data-dropdown-toggle-btn role="button" class="custom-option-toggle-btn">
+                                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.6668 1.33398L6.82508 5.62094C6.37137 6.12722 5.62895 6.12722 5.17525 5.62094L1.3335 1.33398"
+                                            stroke="#AFB1B1" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </span>
+
                             </div>
+                            <ul class="option-list dropdown-box hide-dropdown" role=" option">
+                                <li class="option-list-item">Blog</li>
+                                <li class="option-list-item">Event</li>
+                            </ul>
+                        </div> -->
 
-                            <div ondrop="handleDrop(event)" ondragover="allowDrop(event)"
-                                class="image-input high-input">
-                            </div>
-                        </div>
-
-                        <div class="uploaded-files-container">
-                            <p>No file selected</p>
-                            <button type="button" data-delete-uploaded-item>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#5f6368">
-                                    <path
-                                        d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z" />
-                                </svg>
-                            </button>
-                        </div>
                     </div>
-
-
                     <button type="submit" hidden id="submit-form"></button>
                     <input type="file" accept="image/*" src="" name="" id="imageInput" hidden>
                 </form>
+            </div>
+        </div>
+
+        <div class="wrapper top-2">
+            <header class="content-table-header">
+                <div class="upper-header-section align-center">
+                    <h2 class="upload-title">Enroll Courses</h2>
+
+
+                </div>
+
+            </header>
+            <div class="upload-content">
+                <form action="" id="form" class="upload-form">
+
+
+                    <div class="form-group">
+                        <label for="course-enroll">Add Course</label>
+                        <input id="course-enroll" name="course-enroll" type="course-enroll">
+
+                    </div>
+                    <button type="submit" hidden id="submit-form"></button>
+                    <input type="file" accept="image/*" src="" name="" id="imageInput" hidden>
+                </form>
+
+                <ul class="courses-list">
+                    <li>Machine Learning</li>
+                    <li>Machine Learning</li>
+                    <li>Machine Learning</li>
+
+                </ul>
             </div>
         </div>
 

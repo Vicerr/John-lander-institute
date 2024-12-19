@@ -1,0 +1,45 @@
+.notifications-section-container {
+    margin-top: 1rem;
+    display: grid;
+
+    &.resources {
+        .title {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+}
+
+.notification-card {
+    padding-block: 1rem;
+    display: grid;
+    text-decoration: none;
+    gap: .6rem;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid $light-clr;
+    }
+
+
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+        color: #373939;
+        font-weight: 700;
+    }
+
+    .date {
+        color: #373939;
+        font-weight: 500;
+    }
+}
+
+.notification-body {
+    color: #4A4C4C;
+    font-size: .85rem;
+}

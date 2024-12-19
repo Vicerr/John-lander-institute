@@ -10,6 +10,10 @@
     align-items: center;
 }
 
+.lower-header-section.space-right {
+    justify-content: flex-end;
+}
+
 .section-table-title {
     display: flex;
     align-items: center;
@@ -99,9 +103,9 @@
         font-size: 14px;
         font-weight: 500;
 
-        tr:hover {
-            cursor: pointer;
-        }
+        // tr:hover {
+        //     cursor: pointer;
+        // }
 
         tr:not(:last-child) {
             border-bottom: 1px solid $light-clr;
@@ -270,13 +274,4 @@
             background-color: $light-clr;
         }
     }
-}
-
-.user-management-table {
-    tbody {
-        tr:hover {
-            cursor: pointer;
-        }
-    }
-
 }
