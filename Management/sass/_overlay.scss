@@ -14,9 +14,11 @@
     align-items: center;
     padding-inline: 20px;
 
-    &:has(.certificate-img) {
+    &:has([data-certificate-results]) {
         background-color: transparent;
     }
+
+
 }
 
 

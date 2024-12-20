@@ -492,6 +492,12 @@ button {
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 4px 6px 12.6px 1px rgba(0, 0, 0, 0.0509803922);
+  scale: 1;
+  transition: scale 0.3s ease-in-out;
+}
+.card:hover {
+  scale: 1.02;
+  cursor: pointer;
 }
 @media screen and (width < 600px) {
   .card {
