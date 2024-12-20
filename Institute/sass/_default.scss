@@ -189,6 +189,10 @@ input {
     >* {
         min-width: 300px;
         flex-grow: 1;
+
+        @media screen and (width > 600px) {
+            flex-basis: 25%;
+        }
     }
 }
 

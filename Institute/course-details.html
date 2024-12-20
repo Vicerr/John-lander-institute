@@ -34,22 +34,26 @@
     <header class="hero-header regular">
         <nav data-navigation>
             <div class="wrapper container-fluid">
-                <div class="extra">
-                    <a href="/" aria-label="logo image" class="logo"><img src="/assets/logo/logo.png" alt=""></a><svg
-                        class="open-nav" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                        width="24px" fill="#5f6368">
-                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-                    </svg>
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                                            fill="#5f6368">
-                                            <path
-                                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                                        </svg> -->
+                <!-- LOGO CONTAINER  -->
+                <div class="logo-container">
+                    <a href="/index.html" aria-label="logo image" class="logo"><img src="/assets/logo/logo.webp"
+                            alt="logo"></a>
+                    <!-- BUTTON TO TOGGLE NAVIGATION ON MOBILE SCREEN -->
+                    <div class="open-nav toggle-mobile-nav">
+                        <div class="bar"></div>
+                        <div class="bar alt"></div>
+                        <div class="bar"></div>
+                    </div>
                 </div>
                 <ul class="nav-items display-none" aria-expanded="false" data-searchbar-opened="false">
+                    <!-- NAVIGATION LINKS  -->
                     <div class="responsive-nav-wrapper">
+                        <!-- HOME PAGE LINK  -->
                         <li><a href="/">Home</a></li>
-                        <li class="link-dropdown-parent"><a href="#contact"><span>Program</span>
+                        <!-- PROGRAMS PAGE WITH DROPDOWN LINK  -->
+                        <li class="link-dropdown-parent">
+                            <a href="javascript:void(0)" role="button">
+                                <span>Program</span>
                                 <span>
                                     <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -58,22 +62,23 @@
                                             stroke-width="1.33333" stroke-miterlimit="10" stroke-linecap="round"
                                             stroke-linejoin="round" />
                                     </svg>
-
                                 </span>
                             </a>
                             <ul class="dropdown" aria-expanded="false">
                                 <div>
                                     <li><a href="/courses.html">Courses</a></li>
-                                    <li><a href="/research.html">Reserach</a></li>
-                                    <li><a href="/intenship.html">Intenship</a></li>
+
+                                    <li><a href="/internship.html">Internship</a></li>
 
                                 </div>
                             </ul>
                         </li>
-
+                        <!-- ABOUT PAGE LINK  -->
                         <li><a href="/about.html">About Us</a></li>
-
-                        <li class="link-dropdown-parent"><a href="/contact.html"><span>Media</span>
+                        <!-- MEDIA PAGE LINK  -->
+                        <li class="link-dropdown-parent">
+                            <a href="javascript:void(0)" role="button">
+                                <span>Media</span>
                                 <span>
                                     <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -92,8 +97,9 @@
                                 </div>
                             </ul>
                         </li>
-
+                        <!-- CONTACT PAGE LINK  -->
                         <li><a href="/contact.html">Contact Us</a></li>
+                        <!-- SEARCHBAR  -->
                         <li class="keep">
                             <form action="" aria-expanded="true" class="search-bar">
                                 <button type="submit" class="input-search-btn">
@@ -111,7 +117,7 @@
 
                             </form>
                         </li>
-
+                        <!-- CALL TO ACTION IN NAVBAR ON MOBILE SCREENS -->
                         <div class="nav-cta">
                             <li class="dropdown-cta">
                                 <a href="" class="cta full-width">Explore Programs
@@ -124,6 +130,7 @@
                                 </a>
                             </li>
                         </div>
+                        <!-- BUTTON TO OPEN SEARCH BAR  -->
                         <li data-toggle-searchbar="open">
                             <button aria-label=" open search bar">
                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
@@ -136,7 +143,7 @@
                                 </svg>
                             </button>
                         </li>
-
+                        <!-- BUTTON TO CLOSE SEARCH BAR  -->
                         <li class="keep" data-toggle-searchbar="close">
                             <button>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -146,7 +153,6 @@
                                 </svg>
                             </button>
                         </li>
-
                     </div>
                 </ul>
             </div>
@@ -584,7 +590,7 @@
 
                     <ul class="social-links">
                         <li>
-                            <a href="">
+                            <a aria-label="facebook link" href="">
                                 <svg fill="#0E8543" width="20px" height="20px" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg" stroke="#0E8543">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -598,7 +604,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a aria-label="instagram link" href="">
                                 <svg fill="#0E8543" width="20px" height="20px" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -615,7 +621,7 @@
 
                         </li>
                         <li>
-                            <a href="">
+                            <a aria-label="linked-in link" href="">
 
                                 <svg fill="#0E8543" height="20px" width="20px" version="1.1" id="Icons"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -630,7 +636,7 @@
                                 </svg>
                             </a>
                         </li>
-                        <li><a href="">
+                        <li><a aria-label="whatsapp" href="">
                                 <svg viewBox="0 0 20 20" version="1.1" width="20" height="20"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     fill="#000000">
@@ -682,7 +688,7 @@
                 </ul>
             </div>
             <div class="copyright-section">
-                <img src="/assets/logo/john lander institute logowhite 1.png" alt="">
+                <img src="/assets/logo/john lander institute logowhite 1.png" loading="lazy" alt="logo">
                 <p> &#169; 2024 John Lander Enegy Institute</p>
                 <p>All Right Reserved</p>
             </div>

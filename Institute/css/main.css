@@ -178,6 +178,11 @@ input {
   min-width: 300px;
   flex-grow: 1;
 }
+@media screen and (width > 600px) {
+  .two-column-layout > * {
+    flex-basis: 25%;
+  }
+}
 
 .form-group {
   display: grid;
@@ -781,10 +786,11 @@ nav ul {
   gap: 1rem;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 @media screen and (width > 600px) {
   .events .wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 4rem;
   }
 }
@@ -797,7 +803,6 @@ nav ul {
 }
 
 .event-card {
-  display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 12px;
@@ -812,10 +817,11 @@ nav ul {
 }
 @media screen and (width > 600px) {
   .event-card img {
-    max-width: 250px;
+    width: 100%;
+    height: 100%;
   }
   .event-card .event-img-container {
-    max-height: 300px;
+    height: 300px;
   }
 }
 .event-card .event-img-container {
@@ -1540,18 +1546,20 @@ footer.wrapper .social-links a:visited {
 .image-grid > * {
   flex: 1;
 }
+.image-grid div:first-child {
+  background-color: rgb(219, 219, 219);
+}
 .image-grid .two-boxes {
   display: flex;
   gap: 10px;
   flex-direction: column;
 }
 .image-grid .two-boxes div {
-  background-color: red;
+  background-color: rgb(219, 219, 219);
   flex: 1;
 }
 .image-grid > div:first-child {
   min-height: 500px;
-  background-color: red;
   height: 100%;
 }
 @media screen and (width < 600px) {
@@ -1597,6 +1605,7 @@ footer.wrapper .social-links a:visited {
 
 .library-page {
   display: grid;
+  padding-block: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
 }
@@ -1614,7 +1623,6 @@ footer.wrapper .social-links a:visited {
   border-radius: 8px;
 }
 .library-page .library-card {
-  text-align: center;
   display: block;
   text-decoration: none;
   color: inherit;
@@ -1628,4 +1636,26 @@ footer.wrapper .social-links a:visited {
 .library-page .text-content P,
 .library-page .text-content h4 {
   margin-block: 0;
+}
+
+.library-header-title {
+  text-align: center;
+}
+
+.about-content-text {
+  margin-top: 6rem;
+}
+@media screen and (width > 600px) {
+  .about-content-text {
+    margin-top: 12rem;
+  }
+}
+.about-content-text > div {
+  text-align: center;
+  margin-inline: auto;
+  max-width: 700px;
+}
+.about-content-text > div p {
+  width: 100%;
+  max-width: unset;
 }/*# sourceMappingURL=main.css.map */

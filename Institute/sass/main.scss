@@ -28,9 +28,14 @@
         flex: 1;
     }
 
+    div:first-child {
+        background-color: rgb(219, 219, 219);
+
+    }
+
     .two-boxes {
         div {
-            background-color: red;
+            background-color: rgb(219, 219, 219);
             flex: 1;
         }
 
@@ -46,7 +51,6 @@
             min-height: 200px;
         }
 
-        background-color: red;
         height: 100%;
     }
 }
@@ -93,6 +97,7 @@
 
 .library-page {
     display: grid;
+    padding-block: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
 
@@ -112,7 +117,6 @@
     }
 
     .library-card {
-        text-align: center;
         display: block;
         text-decoration: none;
         color: inherit;
@@ -129,5 +133,31 @@
         }
 
         gap: .6em;
+    }
+}
+
+.library-header-title {
+    text-align: center;
+}
+
+.library-hero-image {}
+
+.about-content-text {
+    margin-top: 6rem;
+
+    @media screen and (width>600px) {
+
+        margin-top: 12rem;
+    }
+
+    >div {
+        text-align: center;
+        margin-inline: auto;
+        max-width: 700px;
+
+        p {
+            width: 100%;
+            max-width: unset;
+        }
     }
 }
