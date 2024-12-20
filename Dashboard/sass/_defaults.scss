@@ -34,6 +34,10 @@ textarea {
     font-family: inherit;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .hide-dropdown,
 .hide-element {
     display: none !important;
@@ -47,6 +51,22 @@ textarea {
 
 .main-content {
     padding: 3rem 2.5rem;
+
+    >p {
+        margin-left: 1rem;
+
+    }
+
+    >.page-title {
+        font-weight: 600;
+        font-size: px-to-rem(28px);
+    }
+
+    >.page-subtitle {
+        font-weight: 500;
+        color: #373939;
+        font-size: px-to-rem(14px);
+    }
 
     >.wrapper {
         background-color: #FDFCFC;
@@ -171,8 +191,8 @@ svg {
         padding: 2rem;
         border-radius: 8px;
         width: min(85%, 500px);
-        text-align: center;
     }
+
 
     .user-image {
         display: grid;
@@ -204,6 +224,13 @@ svg {
             justify-content: center;
             align-items: center;
         }
+    }
+
+    .top-section {
+        display: flex;
+
+        color: $primary-text-clr;
+        justify-content: space-between;
     }
 
 }
@@ -290,6 +317,48 @@ $txt-bozy-clr: #373939;
     }
 }
 
+.view-course-section {
+    .divider {
+
+        max-width: 600px;
+    }
+
+    .course-file-upload {
+        width: fit-content;
+        display: flex;
+        gap: 8px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .file-icon,
+    .icon {
+        all: unset;
+        display: grid;
+        place-content: center;
+
+        cursor: pointer;
+    }
+
+    .courses-list {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .file-icon {
+        width: 30px;
+        height: 30px;
+        background-color: #DCDDDD;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
 .form-upload.internship {
     margin-top: 3rem;
 
@@ -307,6 +376,13 @@ $txt-bozy-clr: #373939;
     border-radius: 50%;
 }
 
+.icon {
+    all: unset;
+    display: grid;
+    place-content: center;
+
+    cursor: pointer;
+}
 
 .courses-list {
     list-style: none;

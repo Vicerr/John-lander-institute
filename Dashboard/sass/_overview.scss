@@ -1,0 +1,114 @@
+.top-overview {
+    background-color: transparent !important;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // background-color: var(--_bg-color);
+    color: var(--_color);
+
+    >*:not(.green-bg) {
+        .percentage {
+            color: #0B8342;
+            background-color: #EFFCF6;
+        }
+
+        .bar-container {
+            background-color: #9BD4A8;
+
+            .bar {
+                background-color: #319856;
+            }
+        }
+
+    }
+}
+
+.overview-box {
+
+    &.green-bg {
+        --_color: white;
+        --_bg-color: #319856;
+        // background-color: green;
+        --_dark-color: ;
+        --_svg-bg-clr: #52AD6E;
+    }
+
+    --_dark-color: #0c0c0c;
+    --_color: #373939;
+    --_bg-color: white;
+    padding: px-to-rem(24px) px-to-rem(20px);
+    border-radius: 8px;
+    display: grid;
+    gap: .70rem;
+    color: var(--_color);
+    background-color: var(--_bg-color);
+
+
+
+    &-section {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+        .svg-container {
+            background-color: var(--_svg-bg-clr, #fff);
+            box-shadow: 0px 4px 9.2px 2px #0000000F;
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            display: grid;
+            place-content: center;
+
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .big-number {
+            display: inline-block;
+            font-size: px-to-rem(32px);
+            font-weight: 600;
+            color: var(--_dark-color, #fff);
+        }
+
+        .percentage {
+            display: inline-block;
+            padding: px-to-rem(8px) px-to-rem(12px);
+            background-color: #52AD6E;
+            font-size: .85rem;
+            border-radius: 37px;
+        }
+
+        &:has(.bar) {
+            gap: 4px;
+
+        }
+
+        .bar-container {
+            width: 120px;
+            height: 6px;
+            border-radius: 10px;
+            background-color: #0B8342;
+
+            .bar {
+                border-radius: 10px;
+                width: 60%;
+                height: 100%;
+                background-color: white;
+            }
+        }
+
+        .bar-text {
+            font-size: 12px;
+        }
+
+        // .column-bars {
+        //     width: 70px;
+        // }
+
+    }
+
+    p {
+        font-size: px-to-rem(12px);
+    }
+}

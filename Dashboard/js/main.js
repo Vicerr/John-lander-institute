@@ -214,7 +214,7 @@ popoverContainer?.addEventListener("click", (e) => {
 // create an array of manual comparison between pages i wan't the active class to be on
 const activeLinks = {
     "/courses": ["add-course"],
-    "/management": ["add-student", "view-student"],
+    "/management": ["add-student", "view-student", "view-course"],
     "/media": ["events", "upload-content"],
     "/messages": ["internship-details"],
     "/library": ["add-library"],
