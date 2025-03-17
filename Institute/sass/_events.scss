@@ -13,7 +13,12 @@
     }
 
     .wrapper {
-        gap: 1rem;
+        @media screen and (width > $main-breakpoint-width) {
+            gap: 1.5rem;
+
+        }
+
+        gap: 3.5rem;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
     }
