@@ -146,6 +146,10 @@
                 border: 1.5px solid var(--primary-clr);
             }
         }
+
+        @media screen and (width < $main-breakpoint-width) {
+            display: none;
+        }
     }
 
     [data-animation="slide-in"] {
@@ -268,4 +272,34 @@
             min-height: 100vh;
             align-content: center;
         }
+    }
+
+    div:has(.title-underline.center) {
+        width: 100%;
+    }
+
+    .title-underline {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background-color: white;
+            bottom: -8px;
+            left: 0;
+        }
+
+        &.center {
+            text-align: center;
+            margin-inline: auto;
+
+            &::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+        }
+
     }

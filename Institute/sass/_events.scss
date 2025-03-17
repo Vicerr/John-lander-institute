@@ -8,11 +8,16 @@
         margin-bottom: 2rem;
     }
 
+    &.featured>.wrapper {
+        grid-template-columns: 1fr;
+    }
+
     .wrapper {
         gap: 1rem;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
     }
+
 
 
 
@@ -108,6 +113,9 @@
     gap: 2rem;
     position: relative;
 
+    .events {
+        padding-top: 0;
+    }
 
 
     aside {
@@ -155,4 +163,37 @@
 
 
     }
+}
+
+// PAGINATION STYLING 
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    margin-block: 20px;
+    gap: 5px;
+}
+
+.pagination-controls button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+}
+
+.pagination-controls button.active {
+    background-color: #0056b3;
+    font-weight: bold;
+}
+
+.pagination-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
